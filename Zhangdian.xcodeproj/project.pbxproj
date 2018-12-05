@@ -14,6 +14,8 @@
 		3522B51521B7685C004A7C8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3522B51421B7685C004A7C8F /* Assets.xcassets */; };
 		3522B51821B7685C004A7C8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3522B51621B7685C004A7C8F /* LaunchScreen.storyboard */; };
 		3522B51B21B7685C004A7C8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522B51A21B7685C004A7C8F /* main.m */; };
+		3522B52621B7ADD4004A7C8F /* ZDNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522B52521B7ADD4004A7C8F /* ZDNet.m */; };
+		A5A2A42F531144D6679D77F0 /* libPods-Zhangdian.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88037EDA2A5EBB9C4C1AEA4A /* libPods-Zhangdian.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,12 @@
 		3522B51721B7685C004A7C8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3522B51921B7685C004A7C8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3522B51A21B7685C004A7C8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3522B52421B7ADD4004A7C8F /* ZDNet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDNet.h; sourceTree = "<group>"; };
+		3522B52521B7ADD4004A7C8F /* ZDNet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDNet.m; sourceTree = "<group>"; };
+		3522B52721B7AF64004A7C8F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		88037EDA2A5EBB9C4C1AEA4A /* libPods-Zhangdian.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zhangdian.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A429E866A7E09B30BA8E67F9 /* Pods-Zhangdian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zhangdian.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zhangdian/Pods-Zhangdian.release.xcconfig"; sourceTree = "<group>"; };
+		EF5CBF5FCE6A4331B0BE8C2F /* Pods-Zhangdian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zhangdian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zhangdian/Pods-Zhangdian.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A2A42F531144D6679D77F0 /* libPods-Zhangdian.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B3D77582358BCC3FE4FFDA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88037EDA2A5EBB9C4C1AEA4A /* libPods-Zhangdian.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3522B4FC21B7685A004A7C8F = {
 			isa = PBXGroup;
 			children = (
 				3522B50721B7685B004A7C8F /* Zhangdian */,
 				3522B50621B7685B004A7C8F /* Products */,
+				F20DC638B520CB8C0B7F783C /* Pods */,
+				1B3D77582358BCC3FE4FFDA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,11 +79,8 @@
 		3522B50721B7685B004A7C8F /* Zhangdian */ = {
 			isa = PBXGroup;
 			children = (
-				3522B50821B7685B004A7C8F /* AppDelegate.h */,
-				3522B50921B7685B004A7C8F /* AppDelegate.m */,
-				3522B50B21B7685B004A7C8F /* ViewController.h */,
-				3522B50C21B7685B004A7C8F /* ViewController.m */,
-				3522B50E21B7685B004A7C8F /* Main.storyboard */,
+				3522B52221B7AD71004A7C8F /* Base */,
+				3522B52121B7AD59004A7C8F /* Tool */,
 				3522B51421B7685C004A7C8F /* Assets.xcassets */,
 				3522B51621B7685C004A7C8F /* LaunchScreen.storyboard */,
 				3522B51921B7685C004A7C8F /* Info.plist */,
@@ -74,6 +90,45 @@
 			path = Zhangdian;
 			sourceTree = "<group>";
 		};
+		3522B52121B7AD59004A7C8F /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				3522B52321B7AD9B004A7C8F /* NetWork */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		3522B52221B7AD71004A7C8F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3522B50821B7685B004A7C8F /* AppDelegate.h */,
+				3522B50921B7685B004A7C8F /* AppDelegate.m */,
+				3522B50B21B7685B004A7C8F /* ViewController.h */,
+				3522B50C21B7685B004A7C8F /* ViewController.m */,
+				3522B50E21B7685B004A7C8F /* Main.storyboard */,
+				3522B52721B7AF64004A7C8F /* PrefixHeader.pch */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3522B52321B7AD9B004A7C8F /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				3522B52421B7ADD4004A7C8F /* ZDNet.h */,
+				3522B52521B7ADD4004A7C8F /* ZDNet.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		F20DC638B520CB8C0B7F783C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF5CBF5FCE6A4331B0BE8C2F /* Pods-Zhangdian.debug.xcconfig */,
+				A429E866A7E09B30BA8E67F9 /* Pods-Zhangdian.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -81,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3522B51E21B7685C004A7C8F /* Build configuration list for PBXNativeTarget "Zhangdian" */;
 			buildPhases = (
+				3948FF828960133CC4A57773 /* [CP] Check Pods Manifest.lock */,
 				3522B50121B7685B004A7C8F /* Sources */,
 				3522B50221B7685B004A7C8F /* Frameworks */,
 				3522B50321B7685B004A7C8F /* Resources */,
+				0E20C3241A9D89D0ED564F6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,6 +196,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E20C3241A9D89D0ED564F6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Zhangdian/Pods-Zhangdian-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zhangdian/Pods-Zhangdian-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3948FF828960133CC4A57773 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zhangdian-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3522B50121B7685B004A7C8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -147,6 +243,7 @@
 				3522B51321B7685B004A7C8F /* Zhangdian.xcdatamodeld in Sources */,
 				3522B50D21B7685B004A7C8F /* ViewController.m in Sources */,
 				3522B51B21B7685C004A7C8F /* main.m in Sources */,
+				3522B52621B7ADD4004A7C8F /* ZDNet.m in Sources */,
 				3522B50A21B7685B004A7C8F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +311,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = Zhangdian/Base/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -271,6 +369,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = Zhangdian/Base/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -287,6 +386,7 @@
 		};
 		3522B51F21B7685C004A7C8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF5CBF5FCE6A4331B0BE8C2F /* Pods-Zhangdian.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +403,7 @@
 		};
 		3522B52021B7685C004A7C8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A429E866A7E09B30BA8E67F9 /* Pods-Zhangdian.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
