@@ -15,5 +15,5 @@ target 'Zhangdian' do
   pod 'CWLateralSlide', '~> 1.6.3'
   pod 'YYCategories','= 1.0.4'
   pod 'HBDNavigationBar', '~> 1.4.4'
-
+  pod 'SDCycleScrollView','~> 1.75'
 end

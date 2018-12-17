@@ -14,6 +14,7 @@
 		3522B51B21B7685C004A7C8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522B51A21B7685C004A7C8F /* main.m */; };
 		3522B52621B7ADD4004A7C8F /* ZDNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522B52521B7ADD4004A7C8F /* ZDNet.m */; };
 		352D9E3B21BA1437007479DA /* ZDTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 352D9E3A21BA1437007479DA /* ZDTitleView.m */; };
+		3531B11221C7722F00530BDC /* ZDCenterBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3531B11121C7722F00530BDC /* ZDCenterBarItem.m */; };
 		35A2EEEF21C7379700A30DB0 /* Set.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A2EEEE21C7379700A30DB0 /* Set.storyboard */; };
 		35A2EEF121C737B900A30DB0 /* Forms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A2EEF021C737B900A30DB0 /* Forms.storyboard */; };
 		35A2EEF321C737CA00A30DB0 /* Billing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A2EEF221C737CA00A30DB0 /* Billing.storyboard */; };
@@ -46,6 +47,8 @@
 		352D9E3921BA1437007479DA /* ZDTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDTitleView.h; sourceTree = "<group>"; };
 		352D9E3A21BA1437007479DA /* ZDTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDTitleView.m; sourceTree = "<group>"; };
 		352D9E3C21BA1D81007479DA /* ZDMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDMacro.h; sourceTree = "<group>"; };
+		3531B11021C7722F00530BDC /* ZDCenterBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDCenterBarItem.h; sourceTree = "<group>"; };
+		3531B11121C7722F00530BDC /* ZDCenterBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDCenterBarItem.m; sourceTree = "<group>"; };
 		35A2EEEE21C7379700A30DB0 /* Set.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Set.storyboard; sourceTree = "<group>"; };
 		35A2EEF021C737B900A30DB0 /* Forms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Forms.storyboard; sourceTree = "<group>"; };
 		35A2EEF221C737CA00A30DB0 /* Billing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Billing.storyboard; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 			children = (
 				352D9E3821BA1061007479DA /* Segment */,
 				3522B52321B7AD9B004A7C8F /* NetWork */,
+				3531B11021C7722F00530BDC /* ZDCenterBarItem.h */,
+				3531B11121C7722F00530BDC /* ZDCenterBarItem.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -522,6 +527,7 @@
 				35A2EF1621C73B0000A30DB0 /* ZDNavigationController.m in Sources */,
 				3522B50A21B7685B004A7C8F /* AppDelegate.m in Sources */,
 				35A2EF1F21C73D7000A30DB0 /* ZDDetailController.m in Sources */,
+				3531B11221C7722F00530BDC /* ZDCenterBarItem.m in Sources */,
 				35A2EEFA21C7384500A30DB0 /* ZDMainPageController.m in Sources */,
 				35A2EF2521C73D9500A30DB0 /* ZDFormsController.m in Sources */,
 			);
