@@ -13,4 +13,6 @@
 #import <YYModel/YYModel.h>
 #import <AFNetworking.h>
 #import "ZDNet.h"
+#import "YYCategories.h"
+#import "ZDMacro.h"
 #endif /* PrefixHeader_pch */

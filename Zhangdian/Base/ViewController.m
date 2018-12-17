@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "ZDTitleView.h"
 @interface ViewController ()
 
 @end
@@ -16,8 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    ZDTitleView *view = [[ZDTitleView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
+    view.backgroundColor = [UIColor redColor];
+    self.navigationItem.titleView = view;
     // Do any additional setup after loading the view, typically from a nib.
 }
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];

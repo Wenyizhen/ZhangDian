@@ -25,6 +25,7 @@ static ZDNet *sharedInstance = nil;
     return sharedInstance;
 }
 
+
 - (instancetype)init {
     self = [super init];
     if (self) {

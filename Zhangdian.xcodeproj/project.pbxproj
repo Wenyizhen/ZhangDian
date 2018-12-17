@@ -15,6 +15,7 @@
 		3522B51821B7685C004A7C8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3522B51621B7685C004A7C8F /* LaunchScreen.storyboard */; };
 		3522B51B21B7685C004A7C8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522B51A21B7685C004A7C8F /* main.m */; };
 		3522B52621B7ADD4004A7C8F /* ZDNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522B52521B7ADD4004A7C8F /* ZDNet.m */; };
+		352D9E3B21BA1437007479DA /* ZDTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 352D9E3A21BA1437007479DA /* ZDTitleView.m */; };
 		A5A2A42F531144D6679D77F0 /* libPods-Zhangdian.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88037EDA2A5EBB9C4C1AEA4A /* libPods-Zhangdian.a */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,9 @@
 		3522B52421B7ADD4004A7C8F /* ZDNet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDNet.h; sourceTree = "<group>"; };
 		3522B52521B7ADD4004A7C8F /* ZDNet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDNet.m; sourceTree = "<group>"; };
 		3522B52721B7AF64004A7C8F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		352D9E3921BA1437007479DA /* ZDTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDTitleView.h; sourceTree = "<group>"; };
+		352D9E3A21BA1437007479DA /* ZDTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDTitleView.m; sourceTree = "<group>"; };
+		352D9E3C21BA1D81007479DA /* ZDMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDMacro.h; sourceTree = "<group>"; };
 		88037EDA2A5EBB9C4C1AEA4A /* libPods-Zhangdian.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zhangdian.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A429E866A7E09B30BA8E67F9 /* Pods-Zhangdian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zhangdian.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zhangdian/Pods-Zhangdian.release.xcconfig"; sourceTree = "<group>"; };
 		EF5CBF5FCE6A4331B0BE8C2F /* Pods-Zhangdian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zhangdian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zhangdian/Pods-Zhangdian.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 		3522B52121B7AD59004A7C8F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				352D9E3821BA1061007479DA /* Segment */,
 				3522B52321B7AD9B004A7C8F /* NetWork */,
 			);
 			path = Tool;
@@ -107,6 +112,7 @@
 				3522B50C21B7685B004A7C8F /* ViewController.m */,
 				3522B50E21B7685B004A7C8F /* Main.storyboard */,
 				3522B52721B7AF64004A7C8F /* PrefixHeader.pch */,
+				352D9E3C21BA1D81007479DA /* ZDMacro.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -118,6 +124,15 @@
 				3522B52521B7ADD4004A7C8F /* ZDNet.m */,
 			);
 			path = NetWork;
+			sourceTree = "<group>";
+		};
+		352D9E3821BA1061007479DA /* Segment */ = {
+			isa = PBXGroup;
+			children = (
+				352D9E3921BA1437007479DA /* ZDTitleView.h */,
+				352D9E3A21BA1437007479DA /* ZDTitleView.m */,
+			);
+			path = Segment;
 			sourceTree = "<group>";
 		};
 		F20DC638B520CB8C0B7F783C /* Pods */ = {
@@ -157,6 +172,7 @@
 		3522B4FD21B7685A004A7C8F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZD;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = wenyizhen;
 				TargetAttributes = {
@@ -241,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3522B51321B7685B004A7C8F /* Zhangdian.xcdatamodeld in Sources */,
+				352D9E3B21BA1437007479DA /* ZDTitleView.m in Sources */,
 				3522B50D21B7685B004A7C8F /* ViewController.m in Sources */,
 				3522B51B21B7685C004A7C8F /* main.m in Sources */,
 				3522B52621B7ADD4004A7C8F /* ZDNet.m in Sources */,
@@ -322,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -376,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
