@@ -15,6 +15,15 @@
 		3522B52621B7ADD4004A7C8F /* ZDNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522B52521B7ADD4004A7C8F /* ZDNet.m */; };
 		352D9E3B21BA1437007479DA /* ZDTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 352D9E3A21BA1437007479DA /* ZDTitleView.m */; };
 		3531B11221C7722F00530BDC /* ZDCenterBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3531B11121C7722F00530BDC /* ZDCenterBarItem.m */; };
+		359A267C21DC456A00C1B9C4 /* ZDCarouselReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 359A267A21DC456A00C1B9C4 /* ZDCarouselReusableView.m */; };
+		359A267D21DC456A00C1B9C4 /* ZDCarouselReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 359A267B21DC456A00C1B9C4 /* ZDCarouselReusableView.xib */; };
+		359A268121DC458200C1B9C4 /* ZDTodayeusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 359A267F21DC458200C1B9C4 /* ZDTodayeusableView.m */; };
+		359A268221DC458200C1B9C4 /* ZDTodayeusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 359A268021DC458200C1B9C4 /* ZDTodayeusableView.xib */; };
+		359A268621DC45B600C1B9C4 /* ZDGuessReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 359A268421DC45B600C1B9C4 /* ZDGuessReusableView.m */; };
+		359A268721DC45B600C1B9C4 /* ZDGuessReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 359A268521DC45B600C1B9C4 /* ZDGuessReusableView.xib */; };
+		359A268A21DC45F700C1B9C4 /* ZDHomeItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 359A268921DC45F700C1B9C4 /* ZDHomeItemCell.m */; };
+		359A268D21DC461500C1B9C4 /* ZDHomeTodayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 359A268C21DC461500C1B9C4 /* ZDHomeTodayCell.m */; };
+		359A269021DC462D00C1B9C4 /* ZDHomeGuessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 359A268F21DC462D00C1B9C4 /* ZDHomeGuessCell.m */; };
 		35A2EEEF21C7379700A30DB0 /* Set.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A2EEEE21C7379700A30DB0 /* Set.storyboard */; };
 		35A2EEF121C737B900A30DB0 /* Forms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A2EEF021C737B900A30DB0 /* Forms.storyboard */; };
 		35A2EEF321C737CA00A30DB0 /* Billing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A2EEF221C737CA00A30DB0 /* Billing.storyboard */; };
@@ -49,6 +58,21 @@
 		352D9E3C21BA1D81007479DA /* ZDMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDMacro.h; sourceTree = "<group>"; };
 		3531B11021C7722F00530BDC /* ZDCenterBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDCenterBarItem.h; sourceTree = "<group>"; };
 		3531B11121C7722F00530BDC /* ZDCenterBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDCenterBarItem.m; sourceTree = "<group>"; };
+		359A267921DC456A00C1B9C4 /* ZDCarouselReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDCarouselReusableView.h; sourceTree = "<group>"; };
+		359A267A21DC456A00C1B9C4 /* ZDCarouselReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDCarouselReusableView.m; sourceTree = "<group>"; };
+		359A267B21DC456A00C1B9C4 /* ZDCarouselReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZDCarouselReusableView.xib; sourceTree = "<group>"; };
+		359A267E21DC458200C1B9C4 /* ZDTodayeusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDTodayeusableView.h; sourceTree = "<group>"; };
+		359A267F21DC458200C1B9C4 /* ZDTodayeusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDTodayeusableView.m; sourceTree = "<group>"; };
+		359A268021DC458200C1B9C4 /* ZDTodayeusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZDTodayeusableView.xib; sourceTree = "<group>"; };
+		359A268321DC45B600C1B9C4 /* ZDGuessReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDGuessReusableView.h; sourceTree = "<group>"; };
+		359A268421DC45B600C1B9C4 /* ZDGuessReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDGuessReusableView.m; sourceTree = "<group>"; };
+		359A268521DC45B600C1B9C4 /* ZDGuessReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZDGuessReusableView.xib; sourceTree = "<group>"; };
+		359A268821DC45F700C1B9C4 /* ZDHomeItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDHomeItemCell.h; sourceTree = "<group>"; };
+		359A268921DC45F700C1B9C4 /* ZDHomeItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDHomeItemCell.m; sourceTree = "<group>"; };
+		359A268B21DC461500C1B9C4 /* ZDHomeTodayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDHomeTodayCell.h; sourceTree = "<group>"; };
+		359A268C21DC461500C1B9C4 /* ZDHomeTodayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDHomeTodayCell.m; sourceTree = "<group>"; };
+		359A268E21DC462D00C1B9C4 /* ZDHomeGuessCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDHomeGuessCell.h; sourceTree = "<group>"; };
+		359A268F21DC462D00C1B9C4 /* ZDHomeGuessCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDHomeGuessCell.m; sourceTree = "<group>"; };
 		35A2EEEE21C7379700A30DB0 /* Set.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Set.storyboard; sourceTree = "<group>"; };
 		35A2EEF021C737B900A30DB0 /* Forms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Forms.storyboard; sourceTree = "<group>"; };
 		35A2EEF221C737CA00A30DB0 /* Billing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Billing.storyboard; sourceTree = "<group>"; };
@@ -252,6 +276,21 @@
 		35A2EEFC21C7385C00A30DB0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				359A267921DC456A00C1B9C4 /* ZDCarouselReusableView.h */,
+				359A267A21DC456A00C1B9C4 /* ZDCarouselReusableView.m */,
+				359A267B21DC456A00C1B9C4 /* ZDCarouselReusableView.xib */,
+				359A267E21DC458200C1B9C4 /* ZDTodayeusableView.h */,
+				359A267F21DC458200C1B9C4 /* ZDTodayeusableView.m */,
+				359A268021DC458200C1B9C4 /* ZDTodayeusableView.xib */,
+				359A268321DC45B600C1B9C4 /* ZDGuessReusableView.h */,
+				359A268421DC45B600C1B9C4 /* ZDGuessReusableView.m */,
+				359A268521DC45B600C1B9C4 /* ZDGuessReusableView.xib */,
+				359A268821DC45F700C1B9C4 /* ZDHomeItemCell.h */,
+				359A268921DC45F700C1B9C4 /* ZDHomeItemCell.m */,
+				359A268B21DC461500C1B9C4 /* ZDHomeTodayCell.h */,
+				359A268C21DC461500C1B9C4 /* ZDHomeTodayCell.m */,
+				359A268E21DC462D00C1B9C4 /* ZDHomeGuessCell.h */,
+				359A268F21DC462D00C1B9C4 /* ZDHomeGuessCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -459,11 +498,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359A268721DC45B600C1B9C4 /* ZDGuessReusableView.xib in Resources */,
 				3522B51821B7685C004A7C8F /* LaunchScreen.storyboard in Resources */,
+				359A267D21DC456A00C1B9C4 /* ZDCarouselReusableView.xib in Resources */,
 				35A2EEEF21C7379700A30DB0 /* Set.storyboard in Resources */,
 				3522B51521B7685C004A7C8F /* Assets.xcassets in Resources */,
 				35A2EF1021C73A5D00A30DB0 /* Main.storyboard in Resources */,
 				35A2EEF121C737B900A30DB0 /* Forms.storyboard in Resources */,
+				359A268221DC458200C1B9C4 /* ZDTodayeusableView.xib in Resources */,
 				35A2EEF721C737E600A30DB0 /* MainPage.storyboard in Resources */,
 				35A2EEF521C737D600A30DB0 /* Detail.storyboard in Resources */,
 				35A2EEF321C737CA00A30DB0 /* Billing.storyboard in Resources */,
@@ -518,6 +560,7 @@
 			files = (
 				35A2EF1C21C73B4800A30DB0 /* ZDBabBarController.m in Sources */,
 				3522B51321B7685B004A7C8F /* Zhangdian.xcdatamodeld in Sources */,
+				359A268621DC45B600C1B9C4 /* ZDGuessReusableView.m in Sources */,
 				352D9E3B21BA1437007479DA /* ZDTitleView.m in Sources */,
 				35A2EF1921C73B2E00A30DB0 /* ZDViewController.m in Sources */,
 				35A2EF2221C73D8400A30DB0 /* ZDBillingController.m in Sources */,
@@ -525,11 +568,16 @@
 				3522B52621B7ADD4004A7C8F /* ZDNet.m in Sources */,
 				35A2EF2821C73DA300A30DB0 /* ZDSetController.m in Sources */,
 				35A2EF1621C73B0000A30DB0 /* ZDNavigationController.m in Sources */,
+				359A267C21DC456A00C1B9C4 /* ZDCarouselReusableView.m in Sources */,
+				359A268121DC458200C1B9C4 /* ZDTodayeusableView.m in Sources */,
 				3522B50A21B7685B004A7C8F /* AppDelegate.m in Sources */,
 				35A2EF1F21C73D7000A30DB0 /* ZDDetailController.m in Sources */,
+				359A268D21DC461500C1B9C4 /* ZDHomeTodayCell.m in Sources */,
 				3531B11221C7722F00530BDC /* ZDCenterBarItem.m in Sources */,
 				35A2EEFA21C7384500A30DB0 /* ZDMainPageController.m in Sources */,
 				35A2EF2521C73D9500A30DB0 /* ZDFormsController.m in Sources */,
+				359A269021DC462D00C1B9C4 /* ZDHomeGuessCell.m in Sources */,
+				359A268A21DC45F700C1B9C4 /* ZDHomeItemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
