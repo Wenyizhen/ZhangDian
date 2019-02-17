@@ -7,7 +7,6 @@
 //
 
 #import "MFContainerSegement.h"
-#import "UIView+MFBadge.h"
 
 static NSString *const MFContainerSegementCellIdentifier = @"MFContainerSegementCellIdentifier";
 
@@ -33,7 +32,7 @@ static NSString *const MFContainerSegementCellIdentifier = @"MFContainerSegement
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = UIColor.clearColor;
         self.viewControllers = viewControllers;
         self.delegate = delegate;
         self.config = config;
@@ -107,12 +106,10 @@ static NSString *const MFContainerSegementCellIdentifier = @"MFContainerSegement
         }else{
             percent = ((formerIndex/self.viewControllers.count) * 1.0 - offsetPercent) * (self.viewControllers.count * 1.0);
 
-            MFLog(@"%ld  %ld    %f     %f", formerIndex, latterIndex, percent, offsetPercent);
 
 
         }
 
-        MFLog(@"%f", percent);
 
         CGRect rect = CGRectZero;
         rect.origin.x = formerFrame.origin.x + (latterFrame.origin.x - formerFrame.origin.x)*percent;
@@ -172,7 +169,6 @@ static NSString *const MFContainerSegementCellIdentifier = @"MFContainerSegement
     [cell setupWithTitle:self.dataArray[indexPath.row].title
                   config:self.config];
     [cell setSelected:(indexPath.item == self.selectedIndex)];
-    [cell showBadgeAtCenterOffset:CGPointMake(self.dataArray[indexPath.row].titleWidth/2, - self.dataArray[indexPath.row].titleHeight/2) visable:[self hasBadgeIndex:indexPath.row]];
     return cell;
 }
 
@@ -199,7 +195,7 @@ static NSString *const MFContainerSegementCellIdentifier = @"MFContainerSegement
     NSInteger realIndex = MIN(MAX(0.0, index), self.viewControllers.count - 1);
 
     CGFloat x = 0.0;
-    CGFloat width = self.dataArray[realIndex].titleWidth - 16.f;
+    CGFloat width = 22;
 
     for (NSInteger i = 0; i < realIndex; i ++) {
         x += [self itemWidthForIndex:i];
@@ -222,7 +218,7 @@ static NSString *const MFContainerSegementCellIdentifier = @"MFContainerSegement
         width = 0.0;
     }
 
-    CGRect rect = CGRectMake(x, y, width, height);
+    CGRect rect = CGRectMake(x, y, 22, height);
     return rect;
 }
 

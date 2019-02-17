@@ -33,9 +33,7 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"ZDCarouselReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ZDCarouselReusableView"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"ZDTodayeusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ZDTodayeusableView"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"ZDGuessReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ZDGuessReusableView"];
-    if (@available(iOS 11.0,*)) {
-        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    }
+    [self contentBehaviorNever:self.collectionView];
 }
 
 #pragma mark - CollectionView

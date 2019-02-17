@@ -11,8 +11,8 @@
 //机型
 #define kIPhoneX          (CGSizeEqualToSize(CGSizeMake(375, 812), [[UIScreen mainScreen] bounds].size) ||  CGSizeEqualToSize(CGSizeMake(414, 896), [[UIScreen mainScreen] bounds].size))
 
-#define kNavStausH                   (IPhoneX ? 88.f : 64.f)//
-#define kTabBarH                       (IPhoneX ? 83.f : 49.f)
+#define kNavStausH                   (kIPhoneX ? 88.f : 64.f)//
+#define kTabBarH                       (kIPhoneX ? 83.f : 49.f)
 
 
 // 常用字体
@@ -26,5 +26,6 @@
 
 //常用颜色
 #define kColor_ffd50d UIColorHex(0xffd50d)
+#define kColor_f7f7f7 UIColorHex(0xf7f7f7)
 
 #endif /* ZDMacro_h */

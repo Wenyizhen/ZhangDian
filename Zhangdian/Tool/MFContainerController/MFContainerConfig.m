@@ -12,15 +12,15 @@
 
 + (MFContainerConfig *)defaultConfig
 {
-    MFContainerConfig * config = [[MFContainerConfig alloc] initWithSegementViewFrame:CGRectMake(0, 0, SCREEN_WIDTH, HEAD_SEGEMENT_HEIGHT)
-                                                                      scrollViewFrame:CGRectMake(0, HEAD_SEGEMENT_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - HEAD_SEGEMENT_HEIGHT - NAVIGATION_HEIGHT)
+    MFContainerConfig * config = [[MFContainerConfig alloc] initWithSegementViewFrame:CGRectMake(0, 0, kScreenWidth, 40)
+                                                                      scrollViewFrame:CGRectMake(0, 40, kScreenWidth, kScreenHeight - 40 - kNavStausH)
                                                                                margin:-8.f
-                                                                      defaultFontSize:15.f
-                                                                     selectedFontSize:15.f
-                                                                         defaultColor:UIColor_TitleThirdColor_99
-                                                                        selectedColor:UIColor_TitleGrayColor_55
+                                                                      defaultFontSize:12
+                                                                     selectedFontSize:12
+                                                                         defaultColor:
+                                                                       UIColor.whiteColor selectedColor:UIColorHex(0e0e0e)
                                                                          fillSegement:YES];
-    config.segementIndicatorColor = UIColor_OrangeColor_ffa727;
+    config.segementIndicatorColor = UIColorHex(0e0e0e);
     config.segementEnableScrolling = YES;
     config.contentEnableScrolling = YES;
     return config;
@@ -28,16 +28,16 @@
 
 + (MFContainerConfig *)navConfigWithTabbar:(BOOL)withTabbar
 {
-    CGFloat tabbarHeight = withTabbar ? TABBAR_HEIGHT : 0;
+    CGFloat tabbarHeight = withTabbar ? kTabBarH : 0;
     MFContainerConfig * config = [[MFContainerConfig alloc] initWithSegementViewFrame:CGRectMake(0, 0, 120, 44.f)
-                                                                   scrollViewFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - tabbarHeight - NAVIGATION_HEIGHT)
+                                                                   scrollViewFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - tabbarHeight - kNavStausH)
                                                                                margin:-8.f
-                                                                      defaultFontSize:17.f
-                                                                     selectedFontSize:17.f
-                                                                         defaultColor:UIColor_TitleThirdColor_99
-                                                                        selectedColor:UIColor_TitleGrayColor_55
+                                                                      defaultFontSize:12
+                                                                     selectedFontSize:12
+                                                                         defaultColor:UIColor.whiteColor
+                                                                        selectedColor:UIColorHex(0e0e0e)
                                                                          fillSegement:YES];
-    config.segementIndicatorColor = UIColor_OrangeColor_ffa727;
+    config.segementIndicatorColor = UIColorHex(0e0e0e);
     config.segementEnableScrolling = NO;
     config.contentEnableScrolling = YES;
     return config;

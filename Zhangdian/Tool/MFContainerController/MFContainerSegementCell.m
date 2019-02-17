@@ -20,9 +20,9 @@
 {
     self.config = config;
     self.titleLabel.text = title;
-
+    self.backgroundColor = UIColor.clearColor;
     self.titleLabel.textColor = config.segementTitleDefaultColor;
-    self.titleLabel.font = [UIFont systemFontOfSize:config.segementTitleDefaultFontSize];
+//    self.titleLabel.font = [UIFont systemFontOfSize:config.segementTitleDefaultFontSize];
 }
 
 - (void)setSelected:(BOOL)selected

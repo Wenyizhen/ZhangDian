@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZDSetCell : UITableViewCell
-
+- (void)configCellWithDict:(NSDictionary *)dict;
 @end
 
 NS_ASSUME_NONNULL_END

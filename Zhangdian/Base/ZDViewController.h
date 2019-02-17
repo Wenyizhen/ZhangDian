@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 //nav 背景颜色
 - (void)setNavBgColor:(UIColor *)color;
 
+- (void)contentBehaviorNever:(UIScrollView *)scrollView;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,26 +7,38 @@
 //
 
 #import "ZDDetailController.h"
-
+#import "ZDBuyController.h"
+#import "ZDRefrigeratorController.h"
 @interface ZDDetailController ()
+@property (strong, nonatomic) MFContainerController *container;
+@property (strong, nonatomic) ZDBuyController *buyVC;
+@property (strong, nonatomic) ZDRefrigeratorController *refrigeratorVC;
 
 @end
 
 @implementation ZDDetailController
-
+#pragma mark - VC
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self configSubViews];
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Private
+- (void)configSubViews {
+    self.buyVC = [[UIStoryboard storyboardWithName:@"Detail" bundle:nil]instantiateViewControllerWithIdentifier:@"ZDBuyController"];
+    self.refrigeratorVC = [[UIStoryboard storyboardWithName:@"Detail"  bundle:nil]instantiateViewControllerWithIdentifier:@"ZDRefrigeratorController"];
+    
+    MFContainerConfig *config = [MFContainerConfig navConfigWithTabbar:YES];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    self.container = [[MFContainerController alloc] initWithSuperViewController:self
+                                                    viewControllers:@[self.buyVC, self.refrigeratorVC]
+                                                                         config:config
+                                                                       delegate:nil];
+    [self.navigationItem setTitleView:self.container.segementView];
+    [self.view addSubview:self.container.view];
 }
-*/
+
+#pragma mark - Property
 
 @end

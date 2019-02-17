@@ -39,6 +39,12 @@
 }
 
 #pragma mark - Public
+- (void)contentBehaviorNever:(UIScrollView *)scrollView {
+    if (@available(iOS 11.0,*)) {
+        scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+}
+
 
 #pragma mark - Nav相关
 - (void)setNavBgAlpha:(CGFloat)alpha {
