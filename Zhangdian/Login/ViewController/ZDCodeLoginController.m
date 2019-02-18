@@ -7,7 +7,7 @@
 //
 
 #import "ZDCodeLoginController.h"
-
+#import "ZDReceiveCodeController.h"
 @interface ZDCodeLoginController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneTF;
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
@@ -45,6 +45,8 @@
 }
 
 - (IBAction)nextAction:(id)sender {
+    ZDReceiveCodeController *vc = [[UIStoryboard storyboardWithName:@"Login" bundle:nil]instantiateViewControllerWithIdentifier:@"ZDReceiveCodeController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)policyAction:(id)sender {

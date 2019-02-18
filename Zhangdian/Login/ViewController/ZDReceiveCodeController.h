@@ -10,6 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface ZDNoMenuTextField : UITextField
+
+@end
+
 @interface ZDReceiveCodeController : ZDViewController
 
 @end
