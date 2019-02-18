@@ -47,7 +47,6 @@
 //    [self.tabBar setBackgroundImage:[UIImage new]];
     [self.tabBar setShadowImage:[UIImage new]];
     self.tabBar.tintColor = UIColorHex(0x363839);
-    
 }
 
 @end

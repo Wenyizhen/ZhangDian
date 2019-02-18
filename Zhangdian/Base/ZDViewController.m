@@ -21,6 +21,10 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)dealloc {
+    NSLog(@"============= dealloc ===============");
+}
+
 #pragma mark - Private
 - (void)configNav {
     if (self.navigationController.viewControllers.count>1) {

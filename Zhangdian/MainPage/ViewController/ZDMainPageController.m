@@ -14,6 +14,7 @@
 #import "ZDHomeItemCell.h"
 #import "ZDHomeTodayCell.h"
 #import "ZDHomeGuessCell.h"
+#import "ZDLoginController.h"
 @interface ZDMainPageController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -117,7 +118,8 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    ZDLoginController *vc = [[UIStoryboard storyboardWithName:@"Login" bundle:nil]instantiateViewControllerWithIdentifier:@"ZDLoginController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

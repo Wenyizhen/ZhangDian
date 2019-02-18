@@ -47,6 +47,10 @@
 		5F387C4C21FD9DAF00FB0F66 /* ZDRefrigeratorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F387C4B21FD9DAF00FB0F66 /* ZDRefrigeratorController.m */; };
 		5F387C5021FDAB9900FB0F66 /* ZDDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F387C4F21FDAB9900FB0F66 /* ZDDetailCell.m */; };
 		5F387C5321FDABB400FB0F66 /* ZDDetailCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F387C5221FDABB400FB0F66 /* ZDDetailCollectionCell.m */; };
+		5F53F51C2219080C00AD8BB5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F53F51B2219080C00AD8BB5 /* Login.storyboard */; };
+		5F53F5612219954C00AD8BB5 /* ZDLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F53F5602219954C00AD8BB5 /* ZDLoginController.m */; };
+		5F53F56422199CCB00AD8BB5 /* ZDCodeLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F53F56322199CCB00AD8BB5 /* ZDCodeLoginController.m */; };
+		5F53F5672219A30F00AD8BB5 /* ZDReceiveCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F53F5662219A30F00AD8BB5 /* ZDReceiveCodeController.m */; };
 		A5A2A42F531144D6679D77F0 /* libPods-Zhangdian.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88037EDA2A5EBB9C4C1AEA4A /* libPods-Zhangdian.a */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +125,13 @@
 		5F387C4F21FDAB9900FB0F66 /* ZDDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDDetailCell.m; sourceTree = "<group>"; };
 		5F387C5121FDABB400FB0F66 /* ZDDetailCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDDetailCollectionCell.h; sourceTree = "<group>"; };
 		5F387C5221FDABB400FB0F66 /* ZDDetailCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDDetailCollectionCell.m; sourceTree = "<group>"; };
+		5F53F51B2219080C00AD8BB5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		5F53F55F2219954C00AD8BB5 /* ZDLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDLoginController.h; sourceTree = "<group>"; };
+		5F53F5602219954C00AD8BB5 /* ZDLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDLoginController.m; sourceTree = "<group>"; };
+		5F53F56222199CCB00AD8BB5 /* ZDCodeLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDCodeLoginController.h; sourceTree = "<group>"; };
+		5F53F56322199CCB00AD8BB5 /* ZDCodeLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDCodeLoginController.m; sourceTree = "<group>"; };
+		5F53F5652219A30F00AD8BB5 /* ZDReceiveCodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDReceiveCodeController.h; sourceTree = "<group>"; };
+		5F53F5662219A30F00AD8BB5 /* ZDReceiveCodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDReceiveCodeController.m; sourceTree = "<group>"; };
 		88037EDA2A5EBB9C4C1AEA4A /* libPods-Zhangdian.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zhangdian.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A429E866A7E09B30BA8E67F9 /* Pods-Zhangdian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zhangdian.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zhangdian/Pods-Zhangdian.release.xcconfig"; sourceTree = "<group>"; };
 		EF5CBF5FCE6A4331B0BE8C2F /* Pods-Zhangdian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zhangdian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zhangdian/Pods-Zhangdian.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +180,7 @@
 			children = (
 				3522B52221B7AD71004A7C8F /* Base */,
 				3522B52121B7AD59004A7C8F /* Tool */,
+				5F53F51A221907F300AD8BB5 /* Login */,
 				35A2EEE921C736DB00A30DB0 /* MainPage */,
 				35A2EEEA21C736E700A30DB0 /* Detail */,
 				35A2EEEB21C7370000A30DB0 /* Billing */,
@@ -472,6 +484,28 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5F53F51A221907F300AD8BB5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5F53F51B2219080C00AD8BB5 /* Login.storyboard */,
+				5F53F51D2219081F00AD8BB5 /* ViewController */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5F53F51D2219081F00AD8BB5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5F53F55F2219954C00AD8BB5 /* ZDLoginController.h */,
+				5F53F5602219954C00AD8BB5 /* ZDLoginController.m */,
+				5F53F56222199CCB00AD8BB5 /* ZDCodeLoginController.h */,
+				5F53F56322199CCB00AD8BB5 /* ZDCodeLoginController.m */,
+				5F53F5652219A30F00AD8BB5 /* ZDReceiveCodeController.h */,
+				5F53F5662219A30F00AD8BB5 /* ZDReceiveCodeController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		F20DC638B520CB8C0B7F783C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +587,7 @@
 				35A2EEF521C737D600A30DB0 /* Detail.storyboard in Resources */,
 				5F387C4521FD9AD400FB0F66 /* MFContainerSegementCell.xib in Resources */,
 				35A2EEF321C737CA00A30DB0 /* Billing.storyboard in Resources */,
+				5F53F51C2219080C00AD8BB5 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +653,7 @@
 				5F387C4121FD9AD400FB0F66 /* MFContainerScrollView.m in Sources */,
 				359A267C21DC456A00C1B9C4 /* ZDCarouselReusableView.m in Sources */,
 				359A268121DC458200C1B9C4 /* ZDTodayeusableView.m in Sources */,
+				5F53F56422199CCB00AD8BB5 /* ZDCodeLoginController.m in Sources */,
 				3522B50A21B7685B004A7C8F /* AppDelegate.m in Sources */,
 				5F387C4921FD9D5700FB0F66 /* ZDBuyController.m in Sources */,
 				35A2EF1F21C73D7000A30DB0 /* ZDDetailController.m in Sources */,
@@ -627,8 +663,10 @@
 				5F387C3421FD599E00FB0F66 /* ZDSetCell.m in Sources */,
 				35A2EF2521C73D9500A30DB0 /* ZDFormsController.m in Sources */,
 				5F387C4621FD9AD400FB0F66 /* MFContainerController.m in Sources */,
+				5F53F5612219954C00AD8BB5 /* ZDLoginController.m in Sources */,
 				359A269021DC462D00C1B9C4 /* ZDHomeGuessCell.m in Sources */,
 				5F387C4321FD9AD400FB0F66 /* MFContainerSegement.m in Sources */,
+				5F53F5672219A30F00AD8BB5 /* ZDReceiveCodeController.m in Sources */,
 				359A268A21DC45F700C1B9C4 /* ZDHomeItemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
