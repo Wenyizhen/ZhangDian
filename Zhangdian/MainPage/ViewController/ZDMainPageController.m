@@ -15,6 +15,7 @@
 #import "ZDHomeTodayCell.h"
 #import "ZDHomeGuessCell.h"
 #import "ZDLoginController.h"
+#import "ZDGoodsDetailController.h"
 @interface ZDMainPageController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -118,8 +119,15 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    ZDLoginController *vc = [[UIStoryboard storyboardWithName:@"Login" bundle:nil]instantiateViewControllerWithIdentifier:@"ZDLoginController"];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (indexPath.section ==0) {
+        ZDLoginController *vc = kStoryLogin(@"ZDLoginController");
+        [self.navigationController pushViewController:vc animated:YES];
+
+    }
+    if (indexPath.section == 1) {
+        ZDGoodsDetailController *vc = kStoryMain(@"ZDGoodsDetailController");
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 

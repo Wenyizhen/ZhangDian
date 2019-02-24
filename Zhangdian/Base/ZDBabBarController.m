@@ -7,8 +7,8 @@
 //
 
 #import "ZDBabBarController.h"
-
-@interface ZDBabBarController ()
+#import "ZDPublishView.h"
+@interface ZDBabBarController ()<UITabBarControllerDelegate>
 
 @end
 
@@ -18,6 +18,7 @@
     [super viewDidLoad];
     [self configSubController];
     [self configTabBar];
+    [[UITabBar appearance] setTranslucent:NO];
     // Do any additional setup after loading the view.
 }
 
@@ -28,25 +29,35 @@
     NSArray *selectedImgArr = @[@"shouyezhong",@"mingxi",@"centerItem",@"baobiao_xuanzhong",@"shezhixuan"];
     ZDNavigationController *mainPageNav =  [[UIStoryboard storyboardWithName:@"MainPage" bundle:nil]instantiateInitialViewController];
     ZDNavigationController *detailNav = [[UIStoryboard storyboardWithName:@"Detail" bundle:nil]instantiateInitialViewController];
-    ZDNavigationController *billingNav = [[UIStoryboard storyboardWithName:@"Billing" bundle:nil]instantiateInitialViewController];
+    UIViewController *billingVC = [[UIViewController alloc]init];
     ZDNavigationController *formsNav = [[UIStoryboard storyboardWithName:@"Forms" bundle:nil]instantiateInitialViewController];
     ZDNavigationController *setNav = [[UIStoryboard storyboardWithName:@"Set" bundle:nil]instantiateInitialViewController];
-    [self setViewControllers:@[mainPageNav,detailNav,billingNav,formsNav,setNav]];
+    [self setViewControllers:@[mainPageNav,detailNav,billingVC,formsNav,setNav]];
     [self.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         UIImage *img = [[UIImage imageNamed:imgArr[idx]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UIImage *selectedImg = [[UIImage imageNamed:selectedImgArr[idx]]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UITabBarItem *item = [[UITabBarItem alloc]initWithTitle:titleArr[idx] image:img selectedImage:selectedImg];
         if (idx == 2) {
-            item.imageInsets =UIEdgeInsetsMake(-15, 0, 15, 0);
+            item.imageInsets =UIEdgeInsetsMake(-10, 0, 10, 0);
         }
         obj.tabBarItem = item;
     }];
 }
 
 - (void)configTabBar {
-//    [self.tabBar setBackgroundImage:[UIImage new]];
     [self.tabBar setShadowImage:[UIImage new]];
     self.tabBar.tintColor = UIColorHex(0x363839);
+    self.delegate = self;
 }
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+    if ([viewController isKindOfClass:[ZDNavigationController class]]) {
+        return YES;
+    }
+    ZDPublishView *view = [[UINib nibWithNibName:@"ZDPublishView" bundle:nil]instantiateWithOwner:nil options:nil].firstObject;
+    [view show];
+    return NO;
+}
+
 
 @end

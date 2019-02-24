@@ -51,7 +51,8 @@
 }
 
 - (IBAction)messageAction:(id)sender {
-    ZDCodeLoginController *vc =  [[UIStoryboard storyboardWithName:@"Login" bundle:nil]instantiateViewControllerWithIdentifier:@"ZDCodeLoginController"];
+    
+    ZDCodeLoginController *vc =  kStoryLogin(@"ZDCodeLoginController");
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -26,8 +26,8 @@
 
 #pragma mark - Private
 - (void)configSubViews {
-    self.buyVC = [[UIStoryboard storyboardWithName:@"Detail" bundle:nil]instantiateViewControllerWithIdentifier:@"ZDBuyController"];
-    self.refrigeratorVC = [[UIStoryboard storyboardWithName:@"Detail"  bundle:nil]instantiateViewControllerWithIdentifier:@"ZDRefrigeratorController"];
+    self.buyVC = kStoryDetail(@"ZDBuyController");
+    self.refrigeratorVC = kStoryDetail(@"ZDRefrigeratorController");
     
     MFContainerConfig *config = [MFContainerConfig navConfigWithTabbar:YES];
 

@@ -45,7 +45,7 @@
 }
 
 - (IBAction)nextAction:(id)sender {
-    ZDReceiveCodeController *vc = [[UIStoryboard storyboardWithName:@"Login" bundle:nil]instantiateViewControllerWithIdentifier:@"ZDReceiveCodeController"];
+    ZDReceiveCodeController *vc = kStoryLogin(@"ZDReceiveCodeController");
     [self.navigationController pushViewController:vc animated:YES];
 }
 

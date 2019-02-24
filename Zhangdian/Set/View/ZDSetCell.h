@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZDSetCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 - (void)configCellWithDict:(NSDictionary *)dict;
 @end
 

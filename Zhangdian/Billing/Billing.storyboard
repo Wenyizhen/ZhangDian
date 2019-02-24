@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nY3-3V-ad0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,37 +10,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="j5K-Ar-cgO">
-            <objects>
-                <navigationController id="nY3-3V-ad0" customClass="ZDNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yar-nt-q87" customClass="HBDNavigationBar">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="bKc-6Z-rWr" kind="relationship" relationship="rootViewController" id="ibP-fO-yWZ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sFz-4M-7g8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-399" y="197"/>
-        </scene>
         <!--Billing Controller-->
-        <scene sceneID="vrI-4U-8UD">
+        <scene sceneID="dro-V8-tQi">
             <objects>
-                <viewController storyboardIdentifier="ZDBillingController" id="bKc-6Z-rWr" customClass="ZDBillingController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="52w-A4-iQY">
+                <viewController storyboardIdentifier="ZDBillingController" id="oFl-QX-n9O" customClass="ZDBillingController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XsL-dl-K9t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="beR-qZ-xiC"/>
+                        <viewLayoutGuide key="safeArea" id="RAZ-ee-O2w"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0Me-oT-9cV"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bmX-Jy-BWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBR-Tb-luA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="609" y="196"/>
         </scene>
     </scenes>
 </document>

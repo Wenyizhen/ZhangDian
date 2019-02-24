@@ -8,6 +8,9 @@
 
 #import "ZDSetController.h"
 #import "ZDSetCell.h"
+#import "ZDCommonController.h"
+#import "ZDPrintController.h"
+#import "ZDEmployeeController.h"
 @interface ZDSetController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *headerView;
@@ -113,7 +116,20 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    if (indexPath.section ==0) {
+        ZDCommonController *vc = kStorySet(@"ZDCommonController");
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.section ==1) {
+        if (indexPath.row == 0) {
+            ZDEmployeeController *vc = kStorySet(@"ZDEmployeeController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    }else if (indexPath.section ==2) {
+        ZDPrintController *vc = kStorySet(@"ZDPrintController");
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.section ==3) {
+        
+    }
 }
 
 @end

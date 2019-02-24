@@ -28,4 +28,11 @@
 #define kColor_ffd50d UIColorHex(0xffd50d)
 #define kColor_f7f7f7 UIColorHex(0xf7f7f7)
 
+//StoryBoard
+#define kStoryMain(VCID)   [[UIStoryboard storyboardWithName:@"MainPage" bundle:nil]instantiateViewControllerWithIdentifier:VCID]
+#define kStoryLogin(VCID) [[UIStoryboard storyboardWithName:@"Login" bundle:nil]instantiateViewControllerWithIdentifier:VCID]
+#define kStoryDetail(VCID) [[UIStoryboard storyboardWithName:@"Detail" bundle:nil]instantiateViewControllerWithIdentifier:VCID]
+#define kStoryBilling(VCID) [[UIStoryboard storyboardWithName:@"Billing" bundle:nil]instantiateViewControllerWithIdentifier:VCID]
+#define kStorySet(VCID)[[UIStoryboard storyboardWithName:@"Set" bundle:nil]instantiateViewControllerWithIdentifier:VCID]
+
 #endif /* ZDMacro_h */

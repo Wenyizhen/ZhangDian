@@ -22,4 +22,6 @@
 #import "ZDNavigationController.h"
 #import "UIImageView+WebCache.h"
 #import "MFContainerController.h"
+#import "UIViewController+CurrentVC.h"
+
 #endif /* PrefixHeader_pch */
