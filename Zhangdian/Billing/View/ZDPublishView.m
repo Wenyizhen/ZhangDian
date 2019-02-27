@@ -8,6 +8,8 @@
 
 #import "ZDPublishView.h"
 #import "ZDPublishCollectionCell.h"
+#import "ZDJSSGController.h"
+#import "ZDYPSGController.h"
 @interface ZDPublishView ()<UICollectionViewDelegate,UICollectionViewDataSource,UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *collectionViewFlowLayout;
@@ -117,9 +119,18 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 //    self.arr = @[@"jssg",@"ypsg",@"jscs",@"ypcs",@"jsrk",@"yprk",@"jsck",@"ypck"];
     [self removeFromSuperview];
-    UIViewController *vc = [[UIViewController alloc]init];
+    NSString *str = [self.arr objectAtIndex:indexPath.row];
+    UIViewController *vc = nil;
+    if ([str isEqualToString:@"jssg"]) {
+        vc = kStoryBilling(@"ZDJSSGController");
+    }else if ([str isEqualToString:@"ypsg"]){
+        vc = kStoryBilling(@"ZDYPSGController");
+    }else if ([str isEqualToString:@"jscs"]) {
+        
+    }
     UIViewController *currentVc = [UIViewController currentViewController];
-    [currentVc.navigationController pushViewController:vc animated:YES];
+    if (vc)
+        [currentVc.navigationController pushViewController:vc animated:YES];
 }
 
 @end

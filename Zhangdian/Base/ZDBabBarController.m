@@ -8,6 +8,7 @@
 
 #import "ZDBabBarController.h"
 #import "ZDPublishView.h"
+#import "ZDIntrolduceView.h"
 @interface ZDBabBarController ()<UITabBarControllerDelegate>
 
 @end
@@ -42,6 +43,14 @@
         }
         obj.tabBarItem = item;
     }];
+    
+    if (![[NSUserDefaults standardUserDefaults]boolForKey:@"first"]) {
+        ZDIntrolduceView *view = [[ZDIntrolduceView alloc]initWithFrame:self.view.bounds];
+        [self.view addSubview:view];
+        [self.view bringSubviewToFront:view];
+        [[NSUserDefaults standardUserDefaults]setBool:@(YES) forKey:@"first"];
+    }
+   
 }
 
 - (void)configTabBar {
@@ -54,6 +63,7 @@
     if ([viewController isKindOfClass:[ZDNavigationController class]]) {
         return YES;
     }
+
     ZDPublishView *view = [[UINib nibWithNibName:@"ZDPublishView" bundle:nil]instantiateWithOwner:nil options:nil].firstObject;
     [view show];
     return NO;

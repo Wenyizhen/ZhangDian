@@ -30,7 +30,7 @@
 {
     CGFloat tabbarHeight = withTabbar ? kTabBarH : 0;
     MFContainerConfig * config = [[MFContainerConfig alloc] initWithSegementViewFrame:CGRectMake(0, 0, 120, 44.f)
-                                                                   scrollViewFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - tabbarHeight - kNavStausH)
+                                                                   scrollViewFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - kNavStausH)
                                                                                margin:-8.f
                                                                       defaultFontSize:12
                                                                      selectedFontSize:12
