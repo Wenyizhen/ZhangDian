@@ -9,7 +9,15 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@interface ZDDetail : NSObject
+@property (strong, nonatomic) NSString *img;
+@property (strong, nonatomic) NSString *str;
+- (instancetype)initWithImg:(NSString *)img str:(NSString *)str;
+@end
+
 @interface ZDDetailCell : UITableViewCell
+@property (assign, nonatomic) NSInteger row;
+@property (weak, nonatomic) IBOutlet UILabel *label;
 @property (copy, nonatomic) void (^selectedBlock)(NSInteger row);
 @end
 

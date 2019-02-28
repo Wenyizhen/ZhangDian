@@ -9,6 +9,11 @@
 #import "ZDScreenReusableView.h"
 
 @implementation ZDScreenReusableView
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.startBtn.layer.cornerRadius = 4;
+    self.endBtn.layer.cornerRadius = 4;
+}
 
 - (IBAction)endAction:(id)sender {
 }

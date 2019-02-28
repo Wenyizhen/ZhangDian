@@ -9,9 +9,8 @@
 #import "ZDScreenCell.h"
 
 @implementation ZDScreenCell
-- (IBAction)maxAction:(id)sender {
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.btn.layer.cornerRadius = 4;
 }
-- (IBAction)minAction:(id)sender {
-}
-
 @end

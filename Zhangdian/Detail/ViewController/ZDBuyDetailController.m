@@ -34,8 +34,9 @@
     self.headerBgView.layer.borderWidth = 0.3;
     self.headerBgView.layer.borderColor = [UIColor colorWithRed:203/255.0 green:204/255.0 blue:204/255.0 alpha:1.0].CGColor;
     self.headerBgView.layer.cornerRadius = 7;
+    self.headerBgView.backgroundColor = [UIColor.whiteColor colorWithAlphaComponent:.85];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"筛选" style:UIBarButtonItemStylePlain target:self action:@selector(screenAction:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"shaixuan"] style:UIBarButtonItemStylePlain target:self action:@selector(screenAction:)];
     self.navigationItem.rightBarButtonItem.tintColor = kColor_NavTint;
     
     self.collectionViewFlowLayout.minimumInteritemSpacing = 7;
@@ -44,7 +45,21 @@
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"ZDScreenReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ZDScreenReusableView_1"];
     self.screenView.hidden = YES;
+    self.screenView.backgroundColor = [UIColor.blackColor colorWithAlphaComponent:.0];
+
     self.trailingLayoutConstraint.constant = 80 -kScreenWidth;
+    @weakify(self);
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithActionBlock:^(id  _Nonnull sender) {
+        @strongify(self);
+        self.trailingLayoutConstraint.constant = 80 - kScreenWidth;
+        [UIView animateWithDuration:.3 animations:^{
+            [self.view layoutIfNeeded];
+            self.screenView.backgroundColor = [UIColor.blackColor colorWithAlphaComponent:.0];
+        }completion:^(BOOL finished) {
+            self.screenView.hidden = YES;
+        }];
+    }];
+    [self.screenView addGestureRecognizer:tap];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

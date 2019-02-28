@@ -37,17 +37,28 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ZDDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ZDDetailCell" forIndexPath:indexPath];
+    cell.label.text = indexPath.row == 0?@"净蒜明细":@"原皮明细";
+    cell.row = indexPath.row;
     @weakify(self);
     cell.selectedBlock = ^(NSInteger row) {
         @strongify(self);
-        if (row == 0) {
-            ZDBuyDetailController *vc = kStoryDetail(@"ZDBuyDetailController");
-            vc.title = [NSString stringWithFormat:@"净蒜收购明细%zd",indexPath.row];
-            [self.navigationController pushViewController:vc animated:YES];
+        if (indexPath.row == 0) {
+            [self jingsuan:row];
+        }else {
+            [self yuanpi:row];
         }
     };
     return cell;
 }
 
+- (void)jingsuan:(NSInteger)row {
+    ZDBuyDetailController *vc = kStoryDetail(@"ZDBuyDetailController");
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)yuanpi:(NSInteger)row {
+    ZDBuyDetailController *vc = kStoryDetail(@"ZDBuyDetailController");
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end
