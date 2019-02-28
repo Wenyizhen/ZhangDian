@@ -36,6 +36,11 @@
 		35A2EF2221C73D8400A30DB0 /* ZDBillingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A2EF2121C73D8400A30DB0 /* ZDBillingController.m */; };
 		35A2EF2521C73D9500A30DB0 /* ZDFormsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A2EF2421C73D9500A30DB0 /* ZDFormsController.m */; };
 		35A2EF2821C73DA300A30DB0 /* ZDSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A2EF2721C73DA300A30DB0 /* ZDSetController.m */; };
+		35A600CA2227ECCB00E20D22 /* ZDScreenReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35A600C92227ECCB00E20D22 /* ZDScreenReusableView.xib */; };
+		35F9EDC52227AB7A005D5ADB /* ZDBuyDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F9EDC42227AB7A005D5ADB /* ZDBuyDetailController.m */; };
+		35F9EDC82227BB14005D5ADB /* ZDBuyDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F9EDC72227BB14005D5ADB /* ZDBuyDetailCell.m */; };
+		35F9EDCB2227DC2D005D5ADB /* ZDScreenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F9EDCA2227DC2D005D5ADB /* ZDScreenCell.m */; };
+		35F9EDCE2227DC57005D5ADB /* ZDScreenReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F9EDCD2227DC57005D5ADB /* ZDScreenReusableView.m */; };
 		5F211B69222256B4008E204D /* ZDPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F211B68222256B4008E204D /* ZDPublishView.m */; };
 		5F211B6B222256D3008E204D /* ZDPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F211B6A222256D3008E204D /* ZDPublishView.xib */; };
 		5F211B6F22225B36008E204D /* UIViewController+CurrentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F211B6E22225B36008E204D /* UIViewController+CurrentVC.m */; };
@@ -131,6 +136,15 @@
 		35A2EF2421C73D9500A30DB0 /* ZDFormsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDFormsController.m; sourceTree = "<group>"; };
 		35A2EF2621C73DA300A30DB0 /* ZDSetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDSetController.h; sourceTree = "<group>"; };
 		35A2EF2721C73DA300A30DB0 /* ZDSetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDSetController.m; sourceTree = "<group>"; };
+		35A600C92227ECCB00E20D22 /* ZDScreenReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZDScreenReusableView.xib; sourceTree = "<group>"; };
+		35F9EDC32227AB7A005D5ADB /* ZDBuyDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDBuyDetailController.h; sourceTree = "<group>"; };
+		35F9EDC42227AB7A005D5ADB /* ZDBuyDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDBuyDetailController.m; sourceTree = "<group>"; };
+		35F9EDC62227BB14005D5ADB /* ZDBuyDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDBuyDetailCell.h; sourceTree = "<group>"; };
+		35F9EDC72227BB14005D5ADB /* ZDBuyDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDBuyDetailCell.m; sourceTree = "<group>"; };
+		35F9EDC92227DC2D005D5ADB /* ZDScreenCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDScreenCell.h; sourceTree = "<group>"; };
+		35F9EDCA2227DC2D005D5ADB /* ZDScreenCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDScreenCell.m; sourceTree = "<group>"; };
+		35F9EDCC2227DC57005D5ADB /* ZDScreenReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDScreenReusableView.h; sourceTree = "<group>"; };
+		35F9EDCD2227DC57005D5ADB /* ZDScreenReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDScreenReusableView.m; sourceTree = "<group>"; };
 		5F211B67222256B4008E204D /* ZDPublishView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPublishView.h; sourceTree = "<group>"; };
 		5F211B68222256B4008E204D /* ZDPublishView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPublishView.m; sourceTree = "<group>"; };
 		5F211B6A222256D3008E204D /* ZDPublishView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZDPublishView.xib; sourceTree = "<group>"; };
@@ -429,6 +443,8 @@
 				5F387C4821FD9D5700FB0F66 /* ZDBuyController.m */,
 				5F387C4A21FD9DAF00FB0F66 /* ZDRefrigeratorController.h */,
 				5F387C4B21FD9DAF00FB0F66 /* ZDRefrigeratorController.m */,
+				35F9EDC32227AB7A005D5ADB /* ZDBuyDetailController.h */,
+				35F9EDC42227AB7A005D5ADB /* ZDBuyDetailController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -619,6 +635,13 @@
 				5F387C4F21FDAB9900FB0F66 /* ZDDetailCell.m */,
 				5F387C5121FDABB400FB0F66 /* ZDDetailCollectionCell.h */,
 				5F387C5221FDABB400FB0F66 /* ZDDetailCollectionCell.m */,
+				35F9EDC62227BB14005D5ADB /* ZDBuyDetailCell.h */,
+				35F9EDC72227BB14005D5ADB /* ZDBuyDetailCell.m */,
+				35F9EDC92227DC2D005D5ADB /* ZDScreenCell.h */,
+				35F9EDCA2227DC2D005D5ADB /* ZDScreenCell.m */,
+				35F9EDCC2227DC57005D5ADB /* ZDScreenReusableView.h */,
+				35F9EDCD2227DC57005D5ADB /* ZDScreenReusableView.m */,
+				35A600C92227ECCB00E20D22 /* ZDScreenReusableView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -731,6 +754,7 @@
 				3522B51521B7685C004A7C8F /* Assets.xcassets in Resources */,
 				35A2EF1021C73A5D00A30DB0 /* Main.storyboard in Resources */,
 				35A2EEF121C737B900A30DB0 /* Forms.storyboard in Resources */,
+				35A600CA2227ECCB00E20D22 /* ZDScreenReusableView.xib in Resources */,
 				5F34F061221EED3000603E87 /* ZDGoodsDetailHeaderView.xib in Resources */,
 				359A268221DC458200C1B9C4 /* ZDTodayeusableView.xib in Resources */,
 				35A2EEF721C737E600A30DB0 /* MainPage.storyboard in Resources */,
@@ -790,6 +814,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F9EDCB2227DC2D005D5ADB /* ZDScreenCell.m in Sources */,
+				35F9EDC52227AB7A005D5ADB /* ZDBuyDetailController.m in Sources */,
 				5F34F05F221EECFC00603E87 /* ZDGoodsDetailHeaderView.m in Sources */,
 				5F387C5021FDAB9900FB0F66 /* ZDDetailCell.m in Sources */,
 				35A2EF1C21C73B4800A30DB0 /* ZDBabBarController.m in Sources */,
@@ -798,6 +824,7 @@
 				5F387C5321FDABB400FB0F66 /* ZDDetailCollectionCell.m in Sources */,
 				5FFBB4D12222A65B00B25F1A /* ZDEmployeeController.m in Sources */,
 				5F35703A2226D99B00C02FE6 /* ZDWarehouseController.m in Sources */,
+				35F9EDC82227BB14005D5ADB /* ZDBuyDetailCell.m in Sources */,
 				359A268621DC45B600C1B9C4 /* ZDGuessReusableView.m in Sources */,
 				5F211B6F22225B36008E204D /* UIViewController+CurrentVC.m in Sources */,
 				5F211B69222256B4008E204D /* ZDPublishView.m in Sources */,
@@ -824,6 +851,7 @@
 				359A268D21DC461500C1B9C4 /* ZDHomeTodayCell.m in Sources */,
 				35A2EEFA21C7384500A30DB0 /* ZDMainPageController.m in Sources */,
 				5F34F059221C51D500603E87 /* ZDPrintController.m in Sources */,
+				35F9EDCE2227DC57005D5ADB /* ZDScreenReusableView.m in Sources */,
 				5F3570302226D17B00C02FE6 /* ZDYPSGController.m in Sources */,
 				5F387C3421FD599E00FB0F66 /* ZDSetCell.m in Sources */,
 				5FFBB4CD222294FF00B25F1A /* ZDPublishCollectionCell.m in Sources */,

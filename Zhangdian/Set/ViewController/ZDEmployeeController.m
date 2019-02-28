@@ -22,7 +22,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"ZDEmployeeCell" bundle:nil] forCellReuseIdentifier:@"ZDEmployeeCell"];
     self.searchBgView.layer.cornerRadius = 19;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"jiahao"] style:UIBarButtonItemStylePlain target:self action:@selector(addAction:)];
-    self.navigationItem.rightBarButtonItem.tintColor = UIColorHex(0x060606);
+    self.navigationItem.rightBarButtonItem.tintColor = kColor_NavTint;
     self.title = @"员工设置";
     // Do any additional setup after loading the view.
 }

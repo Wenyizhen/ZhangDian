@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
 @interface ZDDetailCell : UITableViewCell
-
+@property (copy, nonatomic) void (^selectedBlock)(NSInteger row);
 @end
 
 NS_ASSUME_NONNULL_END

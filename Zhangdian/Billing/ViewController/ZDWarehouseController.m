@@ -23,7 +23,7 @@
 
 - (void)configSubViews {
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"jiahao"] style:UIBarButtonItemStylePlain target:self action:@selector(addAction:)];
-    self.navigationItem.rightBarButtonItem.tintColor = UIColorHex(0x060606);
+    self.navigationItem.rightBarButtonItem.tintColor = kColor_NavTint;
     self.title = @"选择仓库号";
     
     self.footerBgView.layer.shadowColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.18].CGColor;

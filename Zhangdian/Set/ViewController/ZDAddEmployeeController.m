@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(doneAction:)];
-    self.navigationItem.rightBarButtonItem.tintColor = UIColorHex(0x060606);
+    self.navigationItem.rightBarButtonItem.tintColor = kColor_NavTint;
     self.title = @"员工";
     // Do any additional setup after loading the view.
 }

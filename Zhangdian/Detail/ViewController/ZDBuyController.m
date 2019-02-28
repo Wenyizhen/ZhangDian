@@ -7,6 +7,7 @@
 //
 
 #import "ZDBuyController.h"
+#import "ZDBuyDetailController.h"
 #import "ZDDetailCell.h"
 @interface ZDBuyController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -36,6 +37,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ZDDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ZDDetailCell" forIndexPath:indexPath];
+    @weakify(self);
+    cell.selectedBlock = ^(NSInteger row) {
+        @strongify(self);
+        if (row == 0) {
+            ZDBuyDetailController *vc = kStoryDetail(@"ZDBuyDetailController");
+            vc.title = [NSString stringWithFormat:@"净蒜收购明细%zd",indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    };
     return cell;
 }
+
+
 @end

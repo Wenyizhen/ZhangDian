@@ -45,11 +45,10 @@
     return cell;
 }
 
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.selectedBlock) {
+        self.selectedBlock(indexPath.row);
+    }
 }
 
 @end

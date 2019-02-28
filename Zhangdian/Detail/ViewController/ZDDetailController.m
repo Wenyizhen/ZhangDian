@@ -39,6 +39,4 @@
     [self.view addSubview:self.container.view];
 }
 
-#pragma mark - Property
-
 @end
