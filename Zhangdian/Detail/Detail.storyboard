@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="609" y="196"/>
         </scene>
-        <!--购销-->
+        <!--Buy Controller-->
         <scene sceneID="k5O-NG-Wqs">
             <objects>
-                <viewController storyboardIdentifier="ZDBuyController" title="购销" id="fdh-bm-Gvv" customClass="ZDBuyController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ZDBuyController" id="fdh-bm-Gvv" customClass="ZDBuyController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IFS-8s-9Gx"/>
                         <viewControllerLayoutGuide type="bottom" id="zoF-Du-Qm1"/>
@@ -180,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="1388" y="209.14542728635683"/>
         </scene>
-        <!--冷库-->
+        <!--Refrigerator Controller-->
         <scene sceneID="B7i-bl-ckY">
             <objects>
-                <viewController storyboardIdentifier="ZDRefrigeratorController" title="冷库" id="WRB-XN-udy" customClass="ZDRefrigeratorController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ZDRefrigeratorController" id="WRB-XN-udy" customClass="ZDRefrigeratorController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mnj-F4-SNO"/>
                         <viewControllerLayoutGuide type="bottom" id="MmW-Qh-cvk"/>

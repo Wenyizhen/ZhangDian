@@ -12,7 +12,8 @@
 @interface ZDDetailController ()
 @property (strong, nonatomic) MFContainerController *container;
 @property (strong, nonatomic) ZDBuyController *buyVC;
-@property (strong, nonatomic) ZDRefrigeratorController *refrigeratorVC;
+@property (strong, nonatomic) ZDBuyController *refrigeratorVC;
+//@property (strong, nonatomic) ZDRefrigeratorController *refrigeratorVC;
 
 @end
 
@@ -27,8 +28,10 @@
 #pragma mark - Private
 - (void)configSubViews {
     self.buyVC = kStoryDetail(@"ZDBuyController");
-    self.refrigeratorVC = kStoryDetail(@"ZDRefrigeratorController");
-    
+    self.buyVC.title = @"购销";
+//    self.refrigeratorVC = kStoryDetail(@"ZDRefrigeratorController");
+    self.refrigeratorVC = kStoryDetail(@"ZDBuyController");
+    self.refrigeratorVC.title = @"冷库";
     MFContainerConfig *config = [MFContainerConfig navConfigWithTabbar:YES];
 
     self.container = [[MFContainerController alloc] initWithSuperViewController:self
