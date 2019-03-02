@@ -17,8 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZDDetailCell : UITableViewCell
 @property (assign, nonatomic) NSInteger row;
+@property (weak, nonatomic) IBOutlet UIButton *waitBtn;
 @property (weak, nonatomic) IBOutlet UILabel *label;
-@property (copy, nonatomic) void (^selectedBlock)(NSInteger row);
+@property (copy, nonatomic) void (^selectedBlock)(NSInteger row);//-1 待处理
 @end
 
 NS_ASSUME_NONNULL_END

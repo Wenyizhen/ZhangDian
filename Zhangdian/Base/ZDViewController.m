@@ -34,12 +34,8 @@
         self.navigationItem.leftBarButtonItem = backItem;
     }
     self.hbd_barShadowHidden = YES;
-    [self setNavBgColor:kColor_ffd50d];
+    [self setNavBgColor:kColor_NavBg];
     [self setNavTitleColor:UIColor.blackColor];
-}
-
-- (void)backAction:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Public
@@ -49,6 +45,9 @@
     }
 }
 
+- (void)backAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 #pragma mark - Nav相关
 - (void)setNavBgAlpha:(CGFloat)alpha {
@@ -62,7 +61,7 @@
 }
 
 - (void)setNavTitleColor:(UIColor *)color {
-    self.hbd_titleTextAttributes = @{NSForegroundColorAttributeName:color,NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Medium" size:17]};
+    self.hbd_titleTextAttributes = @{NSForegroundColorAttributeName:color,NSFontAttributeName : [UIFont fontWithName:@"STHeitiSC-Light" size:17]};
     [self hbd_setNeedsUpdateNavigationBar];
 }
 

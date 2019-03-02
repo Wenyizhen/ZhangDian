@@ -9,6 +9,10 @@
 #import "ZDBuyController.h"
 #import "ZDBuyDetailController.h"
 #import "ZDDetailCell.h"
+#import "ZDOverstockController.h"
+#import "ZDEverydayController.h"
+#import "ZDProfitController.h"
+#import "ZDPendingController.h"
 @interface ZDBuyController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -52,13 +56,99 @@
 }
 
 - (void)jingsuan:(NSInteger)row {
-    ZDBuyDetailController *vc = kStoryDetail(@"ZDBuyDetailController");
-    [self.navigationController pushViewController:vc animated:YES];
+    switch (row) {
+        case 0:{
+            ZDBuyDetailController *vc = kStoryDetail(@"ZDBuyDetailController");
+            vc.type = DetailType_jingsuan_shougou;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 1:{
+            ZDBuyDetailController *vc = kStoryDetail(@"ZDBuyDetailController");
+            vc.type = DetailType_jingsuan_chushou;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 2:{
+            ZDOverstockController *vc = kStoryDetail(@"ZDOverstockController");
+            vc.type = ProfitType_jingsuan;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 3:{
+            ZDProfitController *vc = kStoryDetail(@"ZDProfitController");
+            vc.type = ProfitType_jingsuan;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 4:{
+            ZDEverydayController *vc = kStoryDetail(@"ZDEverydayController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 5:{
+            
+        }
+            break;
+        case 6:{
+            
+        }
+            break;
+
+        default:{
+            ZDPendingController *vc = kStoryDetail(@"ZDPendingController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+    }
 }
 
 - (void)yuanpi:(NSInteger)row {
-    ZDBuyDetailController *vc = kStoryDetail(@"ZDBuyDetailController");
-    [self.navigationController pushViewController:vc animated:YES];
+    switch (row) {
+        case 0:{
+            ZDBuyDetailController *vc = kStoryDetail(@"ZDBuyDetailController");
+            vc.type = DetailType_yuanpi_shougou;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 1:{
+            ZDBuyDetailController *vc = kStoryDetail(@"ZDBuyDetailController");
+            vc.type = DetailType_yuanpi_chushou;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 2:{
+            ZDOverstockController *vc = kStoryDetail(@"ZDOverstockController");
+            vc.type = ProfitType_yuanpi;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 3:{
+            ZDProfitController *vc = kStoryDetail(@"ZDProfitController");
+            vc.type = ProfitType_yuanpi;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 4:{
+            ZDEverydayController *vc = kStoryDetail(@"ZDEverydayController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 5:{
+            
+        }
+            break;
+        case 6:{
+            
+        }
+            break;
+            
+        default:{
+            ZDPendingController *vc = kStoryDetail(@"ZDPendingController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+    }
 }
 
 @end

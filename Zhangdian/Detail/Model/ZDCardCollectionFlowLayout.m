@@ -19,10 +19,13 @@ static CGFloat kScaleFactor = 0.3;
     CGFloat horizontalCenterX = proposedContentOffset.x + (self.collectionView.frame.size.width/2.);
     NSArray *attriArray = [super layoutAttributesForElementsInRect:targetRect];
     CGFloat offsetAjustment = CGFLOAT_MAX;
+    
+    NSIndexPath *indexPath = nil;
     for (UICollectionViewLayoutAttributes *attributes in attriArray) {
         CGFloat itemHorizontalCenterX = attributes.center.x;
         if (ABS(itemHorizontalCenterX - horizontalCenterX ) < ABS(offsetAjustment)) {
             offsetAjustment = itemHorizontalCenterX - horizontalCenterX;
+            indexPath = attributes.indexPath;
         }
     }
     return CGPointMake(proposedContentOffset.x + offsetAjustment, proposedContentOffset.y);

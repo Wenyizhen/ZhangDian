@@ -25,7 +25,7 @@
 #define kFont_HelveticaNeue_Bold(font) [UIFont fontWithName:@"HelveticaNeue-Bold" size:font]
 
 //常用颜色
-#define kColor_ffd50d UIColorHex(0xffd50d)
+#define kColor_NavBg UIColorHex(0xffd50d)
 #define kColor_f7f7f7 UIColorHex(0xf7f7f7)
 #define kColor_NavTint UIColorHex(0x060606)
 

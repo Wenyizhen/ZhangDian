@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)contentBehaviorNever:(UIScrollView *)scrollView;
 
+- (void)backAction:(id)sender;
 @end
 
 NS_ASSUME_NONNULL_END

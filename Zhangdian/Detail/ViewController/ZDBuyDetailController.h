@@ -9,9 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "ZDViewController.h"
 NS_ASSUME_NONNULL_BEGIN
-
+typedef NS_ENUM(NSInteger,DetailType) {
+    DetailType_jingsuan_shougou,
+    DetailType_yuanpi_shougou,
+    DetailType_jingsuan_chushou,
+    DetailType_yuanpi_chushou,
+};
 @interface ZDBuyDetailController : ZDViewController
-
+@property (assign, nonatomic) DetailType type;
 @end
 
 NS_ASSUME_NONNULL_END

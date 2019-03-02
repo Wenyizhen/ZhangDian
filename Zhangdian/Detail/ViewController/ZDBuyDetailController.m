@@ -10,12 +10,15 @@
 #import "ZDBuyDetailCell.h"
 #import "ZDScreenCell.h"
 #import "ZDScreenReusableView.h"
+#import "ZDTotalController.h"
 @interface ZDBuyDetailController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UIView *screenView;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *collectionViewFlowLayout;
 @property (weak, nonatomic) IBOutlet UIView *headerBgView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *trailingLayoutConstraint;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *tapView;
 
 @end
 
@@ -59,7 +62,32 @@
             self.screenView.hidden = YES;
         }];
     }];
-    [self.screenView addGestureRecognizer:tap];
+    [self.tapView addGestureRecognizer:tap];
+    
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, -400, self.view.width, 400)];
+    view.backgroundColor = kColor_NavBg;
+    [self.tableView addSubview:view];
+    
+    switch (self.type) {
+        case DetailType_yuanpi_chushou:{
+            self.title = @"原皮出售明细";
+        }
+            break;
+        case DetailType_yuanpi_shougou:{
+            self.title = @"原皮收购明细";
+        }
+            break;
+        case DetailType_jingsuan_chushou:{
+            self.title = @"净蒜出售明细";
+        }
+            break;
+        case DetailType_jingsuan_shougou:{
+            self.title = @"净蒜收购明细";
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -132,4 +160,35 @@
     }
 }
 
+- (IBAction)resetAction:(id)sender {
+}
+
+- (IBAction)confirmAction:(id)sender {
+}
+
+- (IBAction)totalAction:(id)sender {
+    ZDTotalController *vc = kStoryDetail(@"ZDTotalController");
+    switch (self.type) {
+        case DetailType_yuanpi_chushou:{
+            vc.title = @"原皮出售明细";
+        }
+            break;
+        case DetailType_yuanpi_shougou:{
+            vc.title = @"原皮收购明细";
+        }
+            break;
+        case DetailType_jingsuan_chushou:{
+            vc.title = @"净蒜出售明细";
+        }
+            break;
+        case DetailType_jingsuan_shougou:{
+            vc.title = @"净蒜收购明细";
+        }
+            break;
+        default:
+            break;
+    }
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
 @end

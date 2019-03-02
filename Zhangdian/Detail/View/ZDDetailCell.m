@@ -10,6 +10,9 @@
 #import "ZDDetailCollectionCell.h"
 
 @implementation ZDDetail
+- (IBAction)waitBtn:(id)sender {
+}
+
 - (instancetype)initWithImg:(NSString *)img str:(NSString *)str {
     self = [super init];
     if (self) {
@@ -76,6 +79,7 @@
                      [[ZDDetail alloc]initWithImg:@"每日报表" str:@"meiribaobiao"],
                      [[ZDDetail alloc]initWithImg:@"财务统计" str:@"caiwutongji"]
                      ];
+        self.waitBtn.hidden = YES;
 
     }else {
         self.arr = @[[[ZDDetail alloc]initWithImg:@"收购明细" str:@"chushoumingxilv"],
@@ -85,6 +89,12 @@
                      [[ZDDetail alloc]initWithImg:@"每日报表" str:@"lan"],
                      [[ZDDetail alloc]initWithImg:@"财务统计" str:@"caiwu"]
                      ];
+        self.waitBtn.hidden = NO;
+    }
+}
+- (IBAction)waitAction:(id)sender {
+    if (self.selectedBlock) {
+        self.selectedBlock(-1);
     }
 }
 
