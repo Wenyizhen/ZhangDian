@@ -11,6 +11,8 @@
 #import "ZDCommonController.h"
 #import "ZDPrintController.h"
 #import "ZDEmployeeController.h"
+#import "ZDBuyerController.h"
+#import "ZDRoleController.h"
 @interface ZDSetController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *headerView;
@@ -62,7 +64,7 @@
 #pragma mark - Property
 - (NSArray *)arr {
     if (nil == _arr) {
-        _arr = @[@{@"icon":@"ku",@"name":@"通用设置"},@{@"icon":@"yuangong",@"name":@"员工设置"},@{@"icon":@"shequniuren",@"name":@"收购商管理"},@{@"icon":@"quanxian",@"name":@"角色权限"},@{@"icon":@"dayin",@"name":@"打印设置"},@{@"icon":@"fenxiang",@"name":@"分享给好友"}];
+        _arr = @[@{@"icon":@"ku",@"name":@"通用设置"},@{@"icon":@"yuangong",@"name":@"员工设置"},@{@"icon":@"shequniuren",@"name":@"收购商管理"},@{@"icon":@"quanxian",@"name":@"角色权限"},@{@"icon":@"dayin",@"name":@"打印设置"},@{@"icon":@"share",@"name":@"分享给好友"}];
     }
     return _arr;
 }
@@ -122,6 +124,14 @@
     }else if (indexPath.section ==1) {
         if (indexPath.row == 0) {
             ZDEmployeeController *vc = kStorySet(@"ZDEmployeeController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        if (indexPath.row == 1) {
+            ZDBuyerController *vc = kStorySet(@"ZDBuyerController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        if (indexPath.row == 2) {
+            ZDRoleController *vc = kStorySet(@"ZDRoleController");
             [self.navigationController pushViewController:vc animated:YES];
         }
     }else if (indexPath.section ==2) {

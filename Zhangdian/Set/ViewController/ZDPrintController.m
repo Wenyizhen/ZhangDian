@@ -8,6 +8,7 @@
 
 #import "ZDPrintController.h"
 #import "ZDSetCell.h"
+#import "ZDPrintSetController.h"
 @interface ZDPrintController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *arr;
@@ -46,5 +47,22 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case 0: {
+            ZDPrintSetController *vc = kStorySet(@"ZDPrintSetController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 1: {
+            
+        }
+            break;
+        case 2: {
+            
+        }
+            break;
+        default:
+            break;
+    }
 }
 @end

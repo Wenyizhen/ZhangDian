@@ -8,7 +8,6 @@
 
 #import "ZDHomeItemCell.h"
 @interface ZDHomeItemCell ()
-@property (weak, nonatomic) IBOutlet UIImageView *imgView;
 
 @end
 

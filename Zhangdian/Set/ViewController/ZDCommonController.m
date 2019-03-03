@@ -8,6 +8,11 @@
 
 #import "ZDCommonController.h"
 #import "ZDSetCell.h"
+#import "ZDCompanyController.h"
+#import "ZDWayController.h"
+#import "ZDEveryController.h"
+#import "ZDPriceController.h"
+#import "ZDNumberController.h"
 
 @interface ZDCommonController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -26,7 +31,7 @@
 #pragma mark - Property
 - (NSArray *)arr {
     if (nil == _arr) {
-        _arr = @[@{@"icon":@"ku",@"name":@"公司资料"},@{@"icon":@"yuangong",@"name":@"结算方式"},@{@"icon":@"shequniuren",@"name":@"每件重量"},@{@"icon":@"quanxian",@"name":@"单价预设"},@{@"icon":@"dayin",@"name":@"库号设置"}];
+        _arr = @[@{@"icon":@"l0",@"name":@"公司资料"},@{@"icon":@"l1",@"name":@"结算方式"},@{@"icon":@"l2",@"name":@"每件重量"},@{@"icon":@"l3",@"name":@"单价预设"},@{@"icon":@"l4",@"name":@"库号设置"}];
     }
     return _arr;
 }
@@ -47,6 +52,36 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case 0:{
+            ZDCompanyController *vc = kStorySet(@"ZDCompanyController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 1:{
+            ZDWayController *vc = kStorySet(@"ZDWayController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 2: {
+            ZDEveryController *vc = kStorySet(@"ZDEveryController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 3:{
+            ZDPriceController *vc = kStorySet(@"ZDPriceController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 4: {
+            ZDNumberController *vc = kStorySet(@"ZDNumberController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+
+        default:
+            break;
+    }
 }
 
 @end

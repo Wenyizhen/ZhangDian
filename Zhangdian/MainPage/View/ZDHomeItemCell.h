@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZDHomeItemCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
 
 @end
 

@@ -16,6 +16,9 @@
 #import "ZDHomeGuessCell.h"
 #import "ZDLoginController.h"
 #import "ZDGoodsDetailController.h"
+#import "ZDTallyController.h"
+#import "ZDPendingController.h"
+#import "ZDReferenceController.h"
 @interface ZDMainPageController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -108,6 +111,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         ZDHomeItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZDHomeItemCell" forIndexPath:indexPath];
+        NSString *str = indexPath.row == 0?@"daichuli":(indexPath.row ==1?@"jizhangben":@"cankaojia");
+        cell.imgView.image = [UIImage imageNamed:str];
         return cell;
     }
     if (indexPath.section == 1) {
@@ -120,11 +125,25 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section ==0) {
+        if (indexPath.row == 0) {
+            ZDPendingController *vc = kStoryDetail(@"ZDPendingController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        if (indexPath.row == 1) {
+            ZDTallyController *vc = kStoryMain(@"ZDTallyController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        if (indexPath.row == 2) {
+            ZDReferenceController *vc = kStoryMain(@"ZDReferenceController");
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    }
+    if (indexPath.section == 1) {
         ZDLoginController *vc = kStoryLogin(@"ZDLoginController");
         [self.navigationController pushViewController:vc animated:YES];
 
     }
-    if (indexPath.section == 1) {
+    if (indexPath.section == 2) {
         ZDGoodsDetailController *vc = kStoryMain(@"ZDGoodsDetailController");
         [self.navigationController pushViewController:vc animated:YES];
     }

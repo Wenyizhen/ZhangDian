@@ -35,5 +35,5 @@
 #define kStoryDetail(VCID) [[UIStoryboard storyboardWithName:@"Detail" bundle:nil]instantiateViewControllerWithIdentifier:VCID]
 #define kStoryBilling(VCID) [[UIStoryboard storyboardWithName:@"Billing" bundle:nil]instantiateViewControllerWithIdentifier:VCID]
 #define kStorySet(VCID)[[UIStoryboard storyboardWithName:@"Set" bundle:nil]instantiateViewControllerWithIdentifier:VCID]
-
+#define kStoryForms(VCID)[[UIStoryboard storyboardWithName:@"Forms" bundle:nil]instantiateViewControllerWithIdentifier:VCID]
 #endif /* ZDMacro_h */

@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZDProgressView : UIView
-@property (assign,  nonatomic) CGFloat progress;
+@property (assign, nonatomic) CGFloat progress;
 @end
 
 NS_ASSUME_NONNULL_END

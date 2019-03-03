@@ -7,10 +7,9 @@
 //
 
 #import "JXCircleRatioView.h"
-#import "JXCircleModel.h"
 
 /*! 白色圆的半径 */
-static CGFloat const whiteCircleRadius = 50;
+//static CGFloat const whiteCircleRadius = 65;
 /*! 指引线的小圆 */
 static CGFloat const smallCircleRadius = .0;
 /*! 指引线的文字字体大小 */
@@ -29,7 +28,7 @@ static CGFloat const foldLineWidth = 10.0;
 - (instancetype)initWithFrame:(CGRect)frame andDataArray:(NSMutableArray *)dataArray CircleRadius:(CGFloat)circleRadius{
     
     if (self = [super initWithFrame:frame]) {
-        
+        self.backgroundColor = UIColor.clearColor;
         self.dataArray = dataArray;
         self.circleRadius = circleRadius;
         
@@ -92,7 +91,7 @@ static CGFloat const foldLineWidth = 10.0;
 
 /// 添加中心白色圆
 -(void)addCenterCircle{
-    UIBezierPath *arcPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2) radius:whiteCircleRadius startAngle:0 endAngle:M_PI * 2 clockwise:YES];
+    UIBezierPath *arcPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2) radius:self.circleRadius - 20 startAngle:0 endAngle:M_PI * 2 clockwise:YES];
     
     [[UIColor whiteColor] set];
     [arcPath fill];
@@ -204,7 +203,7 @@ static CGFloat const foldLineWidth = 10.0;
         
         // 数字
 //        numberStartX = lineEndPointX - numberSize.width;
-        numberStartX = lineEndPointX;
+        numberStartX = lineEndPointX +5;
 //        numberStartY = lineEndPointY - numberSize.height;
         numberStartY = lineEndPointY - numberSize.height/2.;
 
