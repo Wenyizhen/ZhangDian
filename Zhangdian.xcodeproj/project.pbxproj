@@ -77,6 +77,8 @@
 		5F500E0C222BF884007051C3 /* ZDTallyHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F500E0B222BF884007051C3 /* ZDTallyHeader.xib */; };
 		5F500E0F222C01BE007051C3 /* ZDReferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F500E0E222C01BE007051C3 /* ZDReferenceController.m */; };
 		5F500E12222C04D9007051C3 /* ZDReferenceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F500E11222C04D9007051C3 /* ZDReferenceCell.m */; };
+		5F500E15222C1B8B007051C3 /* ZDReceiveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F500E14222C1B8B007051C3 /* ZDReceiveController.m */; };
+		5F500E18222C1D1C007051C3 /* ZDReceiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F500E17222C1D1C007051C3 /* ZDReceiveCell.m */; };
 		5F50EACE222A865D00911328 /* ZDPendingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F50EACD222A865D00911328 /* ZDPendingController.m */; };
 		5F50EAD1222A870F00911328 /* ZDPendingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F50EAD0222A870F00911328 /* ZDPendingCell.m */; };
 		5F50EAD4222AB00800911328 /* ZDTotalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F50EAD3222AB00800911328 /* ZDTotalController.m */; };
@@ -250,6 +252,10 @@
 		5F500E0E222C01BE007051C3 /* ZDReferenceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDReferenceController.m; sourceTree = "<group>"; };
 		5F500E10222C04D9007051C3 /* ZDReferenceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDReferenceCell.h; sourceTree = "<group>"; };
 		5F500E11222C04D9007051C3 /* ZDReferenceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDReferenceCell.m; sourceTree = "<group>"; };
+		5F500E13222C1B8B007051C3 /* ZDReceiveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDReceiveController.h; sourceTree = "<group>"; };
+		5F500E14222C1B8B007051C3 /* ZDReceiveController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDReceiveController.m; sourceTree = "<group>"; };
+		5F500E16222C1D1C007051C3 /* ZDReceiveCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDReceiveCell.h; sourceTree = "<group>"; };
+		5F500E17222C1D1C007051C3 /* ZDReceiveCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDReceiveCell.m; sourceTree = "<group>"; };
 		5F50EACC222A865D00911328 /* ZDPendingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPendingController.h; sourceTree = "<group>"; };
 		5F50EACD222A865D00911328 /* ZDPendingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDPendingController.m; sourceTree = "<group>"; };
 		5F50EACF222A870F00911328 /* ZDPendingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDPendingCell.h; sourceTree = "<group>"; };
@@ -575,6 +581,8 @@
 				5F50EACD222A865D00911328 /* ZDPendingController.m */,
 				5F50EAD2222AB00800911328 /* ZDTotalController.h */,
 				5F50EAD3222AB00800911328 /* ZDTotalController.m */,
+				5F500E13222C1B8B007051C3 /* ZDReceiveController.h */,
+				5F500E14222C1B8B007051C3 /* ZDReceiveController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -786,6 +794,8 @@
 				5F50EAD0222A870F00911328 /* ZDPendingCell.m */,
 				5F50EAD5222AB5E300911328 /* ZDTotalCell.h */,
 				5F50EAD6222AB5E300911328 /* ZDTotalCell.m */,
+				5F500E16222C1D1C007051C3 /* ZDReceiveCell.h */,
+				5F500E17222C1D1C007051C3 /* ZDReceiveCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1038,6 +1048,7 @@
 				5F387C4921FD9D5700FB0F66 /* ZDBuyController.m in Sources */,
 				35A2EF1F21C73D7000A30DB0 /* ZDDetailController.m in Sources */,
 				5F500E0A222BF872007051C3 /* ZDTallyHeader.m in Sources */,
+				5F500E15222C1B8B007051C3 /* ZDReceiveController.m in Sources */,
 				5FEFA0D6222A677A0018528F /* ZDProfitController.m in Sources */,
 				5F50EAD4222AB00800911328 /* ZDTotalController.m in Sources */,
 				5F500E04222BF378007051C3 /* ZDTallyController.m in Sources */,
@@ -1066,6 +1077,7 @@
 				5F5A76BE2222B34C00BE57C0 /* ZDAddEmployeeCell.m in Sources */,
 				5F35702A2226C2FC00C02FE6 /* ZDJSSGController.m in Sources */,
 				5FFDDAE7222A614A0089BA36 /* ZDEveryDayCell.m in Sources */,
+				5F500E18222C1D1C007051C3 /* ZDReceiveCell.m in Sources */,
 				5F9808FA222BA71E004D8028 /* ZDCompanyController.m in Sources */,
 				5F3570372226D65D00C02FE6 /* ZDYPSG.m in Sources */,
 				5F387C4621FD9AD400FB0F66 /* MFContainerController.m in Sources */,
