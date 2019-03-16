@@ -70,6 +70,7 @@
 		5F387C4C21FD9DAF00FB0F66 /* ZDRefrigeratorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F387C4B21FD9DAF00FB0F66 /* ZDRefrigeratorController.m */; };
 		5F387C5021FDAB9900FB0F66 /* ZDDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F387C4F21FDAB9900FB0F66 /* ZDDetailCell.m */; };
 		5F387C5321FDABB400FB0F66 /* ZDDetailCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F387C5221FDABB400FB0F66 /* ZDDetailCollectionCell.m */; };
+		5F39DBDA2234B2AE00C25C65 /* ZDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F39DBD92234B2AE00C25C65 /* ZDTabBar.m */; };
 		5F45E3B3222B7EE900AC5BCE /* ZDFormsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F45E3B2222B7EE900AC5BCE /* ZDFormsCell.m */; };
 		5F500E04222BF378007051C3 /* ZDTallyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F500E03222BF378007051C3 /* ZDTallyController.m */; };
 		5F500E07222BF852007051C3 /* ZDTallyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F500E06222BF852007051C3 /* ZDTallyCell.m */; };
@@ -239,6 +240,8 @@
 		5F387C4F21FDAB9900FB0F66 /* ZDDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDDetailCell.m; sourceTree = "<group>"; };
 		5F387C5121FDABB400FB0F66 /* ZDDetailCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDDetailCollectionCell.h; sourceTree = "<group>"; };
 		5F387C5221FDABB400FB0F66 /* ZDDetailCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDDetailCollectionCell.m; sourceTree = "<group>"; };
+		5F39DBD82234B2AE00C25C65 /* ZDTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDTabBar.h; sourceTree = "<group>"; };
+		5F39DBD92234B2AE00C25C65 /* ZDTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDTabBar.m; sourceTree = "<group>"; };
 		5F45E3B1222B7EE900AC5BCE /* ZDFormsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDFormsCell.h; sourceTree = "<group>"; };
 		5F45E3B2222B7EE900AC5BCE /* ZDFormsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDFormsCell.m; sourceTree = "<group>"; };
 		5F500E02222BF378007051C3 /* ZDTallyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDTallyController.h; sourceTree = "<group>"; };
@@ -425,6 +428,8 @@
 				3522B50921B7685B004A7C8F /* AppDelegate.m */,
 				3522B52721B7AF64004A7C8F /* PrefixHeader.pch */,
 				352D9E3C21BA1D81007479DA /* ZDMacro.h */,
+				5F39DBD82234B2AE00C25C65 /* ZDTabBar.h */,
+				5F39DBD92234B2AE00C25C65 /* ZDTabBar.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1046,6 +1051,7 @@
 				35A600D62229209000E20D22 /* JXCircleModel.m in Sources */,
 				5F3570332226D36200C02FE6 /* ZDYPSGCell.m in Sources */,
 				5F387C4921FD9D5700FB0F66 /* ZDBuyController.m in Sources */,
+				5F39DBDA2234B2AE00C25C65 /* ZDTabBar.m in Sources */,
 				35A2EF1F21C73D7000A30DB0 /* ZDDetailController.m in Sources */,
 				5F500E0A222BF872007051C3 /* ZDTallyHeader.m in Sources */,
 				5F500E15222C1B8B007051C3 /* ZDReceiveController.m in Sources */,

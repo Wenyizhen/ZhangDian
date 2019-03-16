@@ -9,6 +9,7 @@
 #import "ZDBabBarController.h"
 #import "ZDPublishView.h"
 #import "ZDIntrolduceView.h"
+#import "ZDTabBar.h"
 @interface ZDBabBarController ()<UITabBarControllerDelegate>
 
 @end
@@ -17,8 +18,8 @@
 #pragma mark - VC
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configSubController];
     [self configTabBar];
+    [self configSubController];
     [[UITabBar appearance] setTranslucent:NO];
     // Do any additional setup after loading the view.
 }
@@ -43,17 +44,17 @@
         }
         obj.tabBarItem = item;
     }];
-    
     if (![[NSUserDefaults standardUserDefaults]boolForKey:@"first"]) {
         ZDIntrolduceView *view = [[ZDIntrolduceView alloc]initWithFrame:self.view.bounds];
         [self.view addSubview:view];
         [self.view bringSubviewToFront:view];
-        [[NSUserDefaults standardUserDefaults]setBool:@(YES) forKey:@"first"];
+        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"first"];
     }
-   
 }
 
 - (void)configTabBar {
+    ZDTabBar *tabBar = [[ZDTabBar alloc]init];
+    [self setValue:tabBar forKey:@"tabBar"];
     [self.tabBar setShadowImage:[UIImage new]];
     self.tabBar.tintColor = UIColorHex(0x363839);
     self.delegate = self;
