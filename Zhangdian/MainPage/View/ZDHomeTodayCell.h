@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZDHomeTodayCell : UICollectionViewCell
 
+- (void)setHomeTodayDict:(NSDictionary *)dict;
+
 @end
 
 NS_ASSUME_NONNULL_END

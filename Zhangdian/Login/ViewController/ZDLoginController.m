@@ -8,6 +8,8 @@
 
 #import "ZDLoginController.h"
 #import "ZDCodeLoginController.h"
+#import "ZDLoginPort.h"
+
 @interface ZDLoginController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneTF;
 @property (weak, nonatomic) IBOutlet UITextField *codeTF;
@@ -25,17 +27,22 @@
     // Do any additional setup after loading the view.
 }
 
+
 - (void)configSubViews {
+    UIButton *btnClose = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnClose setImage:[UIImage imageNamed:@"guanbi"] forState:UIControlStateNormal];
+    btnClose.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    btnClose.size = CGSizeMake(30, 30);
+    @weakify(self);
+    [[btnClose rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self);
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:btnClose];
     self.loginBtn.layer.cornerRadius = 23;
     self.registerBtn.layer.cornerRadius = 23;
-    [self setNavHidden:YES];
+    [self setNavBgAlpha:0];
     self.codeTF.secureTextEntry = YES;
-    
-    __weak typeof(self) weakSelf = self;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithActionBlock:^(id  _Nonnull sender) {
-        [weakSelf.view endEditing:YES];
-    }];
-    [self.view addGestureRecognizer:tap];
 }
 
 - (IBAction)clearAction:(id)sender {
@@ -60,6 +67,14 @@
 }
 
 - (IBAction)forgetAction:(id)sender {
+}
+
+- (IBAction)didPressedLogin:(id)sender {
+    [ZDLoginPort fetchLogin:_phoneTF.text pwd:_codeTF.text success:^(id  _Nonnull obejct) {
+        
+    } fail:^(NSError * _Nonnull error) {
+        
+    }];
 }
 
 @end

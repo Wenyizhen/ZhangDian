@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZDReceiveCodeController : ZDViewController
 
+@property(nonatomic,copy) NSString *strPhone;
+
 @end
 
 NS_ASSUME_NONNULL_END

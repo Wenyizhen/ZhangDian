@@ -124,6 +124,16 @@
 		5FFDDAE4222A5C3C0089BA36 /* ZDEverydayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDDAE3222A5C3C0089BA36 /* ZDEverydayController.m */; };
 		5FFDDAE7222A614A0089BA36 /* ZDEveryDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDDAE6222A614A0089BA36 /* ZDEveryDayCell.m */; };
 		A5A2A42F531144D6679D77F0 /* libPods-Zhangdian.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88037EDA2A5EBB9C4C1AEA4A /* libPods-Zhangdian.a */; };
+		E0067F8A22412EF60017EF10 /* ZDRegisterPort.m in Sources */ = {isa = PBXBuildFile; fileRef = E0067F8922412EF60017EF10 /* ZDRegisterPort.m */; };
+		E0067F8D2241414B0017EF10 /* ZDSetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0067F8C2241414B0017EF10 /* ZDSetPwdViewController.m */; };
+		E061777D2243D90F008746E4 /* ZDMainGuessPort.m in Sources */ = {isa = PBXBuildFile; fileRef = E061777C2243D90F008746E4 /* ZDMainGuessPort.m */; };
+		E0A4F2F622411DC200AA8FBE /* ZDNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A4F2F522411DC200AA8FBE /* ZDNetwork.m */; };
+		E0A4F2FB2241211F00AA8FBE /* ZDMainPort.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A4F2FA2241211F00AA8FBE /* ZDMainPort.m */; };
+		E0A4F2FF2241216700AA8FBE /* ZDLoginPort.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A4F2FE2241216700AA8FBE /* ZDLoginPort.m */; };
+		E0A4F3022241225C00AA8FBE /* ZDSuperPort.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A4F3012241225C00AA8FBE /* ZDSuperPort.m */; };
+		E0A4F3052241299300AA8FBE /* ZDAuthCode.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A4F3042241299300AA8FBE /* ZDAuthCode.m */; };
+		E0B8DC3F2243B7930085321F /* ZDMemberInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B8DC3E2243B7930085321F /* ZDMemberInfo.m */; };
+		E0B8DC6A2243D0020085321F /* XLMDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B8DC692243D0020085321F /* XLMDateFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -342,6 +352,26 @@
 		5FFDDAE6222A614A0089BA36 /* ZDEveryDayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDEveryDayCell.m; sourceTree = "<group>"; };
 		88037EDA2A5EBB9C4C1AEA4A /* libPods-Zhangdian.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zhangdian.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A429E866A7E09B30BA8E67F9 /* Pods-Zhangdian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zhangdian.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zhangdian/Pods-Zhangdian.release.xcconfig"; sourceTree = "<group>"; };
+		E0067F8822412EF50017EF10 /* ZDRegisterPort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZDRegisterPort.h; path = /Users/beice/Documents/Project/ZhangDian/Zhangdian/Models/Login/ZDRegisterPort.h; sourceTree = "<absolute>"; };
+		E0067F8922412EF60017EF10 /* ZDRegisterPort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZDRegisterPort.m; path = /Users/beice/Documents/Project/ZhangDian/Zhangdian/Models/Login/ZDRegisterPort.m; sourceTree = "<absolute>"; };
+		E0067F8B2241414B0017EF10 /* ZDSetPwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDSetPwdViewController.h; sourceTree = "<group>"; };
+		E0067F8C2241414B0017EF10 /* ZDSetPwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDSetPwdViewController.m; sourceTree = "<group>"; };
+		E061777B2243D90F008746E4 /* ZDMainGuessPort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDMainGuessPort.h; sourceTree = "<group>"; };
+		E061777C2243D90F008746E4 /* ZDMainGuessPort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDMainGuessPort.m; sourceTree = "<group>"; };
+		E0A4F2F422411DC200AA8FBE /* ZDNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDNetwork.h; sourceTree = "<group>"; };
+		E0A4F2F522411DC200AA8FBE /* ZDNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDNetwork.m; sourceTree = "<group>"; };
+		E0A4F2F92241211F00AA8FBE /* ZDMainPort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDMainPort.h; sourceTree = "<group>"; };
+		E0A4F2FA2241211F00AA8FBE /* ZDMainPort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDMainPort.m; sourceTree = "<group>"; };
+		E0A4F2FD2241216700AA8FBE /* ZDLoginPort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDLoginPort.h; sourceTree = "<group>"; };
+		E0A4F2FE2241216700AA8FBE /* ZDLoginPort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDLoginPort.m; sourceTree = "<group>"; };
+		E0A4F3002241225C00AA8FBE /* ZDSuperPort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDSuperPort.h; sourceTree = "<group>"; };
+		E0A4F3012241225C00AA8FBE /* ZDSuperPort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDSuperPort.m; sourceTree = "<group>"; };
+		E0A4F3032241299300AA8FBE /* ZDAuthCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDAuthCode.h; sourceTree = "<group>"; };
+		E0A4F3042241299300AA8FBE /* ZDAuthCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDAuthCode.m; sourceTree = "<group>"; };
+		E0B8DC3D2243B7930085321F /* ZDMemberInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDMemberInfo.h; sourceTree = "<group>"; };
+		E0B8DC3E2243B7930085321F /* ZDMemberInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDMemberInfo.m; sourceTree = "<group>"; };
+		E0B8DC682243D0020085321F /* XLMDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLMDateFormatter.h; sourceTree = "<group>"; };
+		E0B8DC692243D0020085321F /* XLMDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLMDateFormatter.m; sourceTree = "<group>"; };
 		EF5CBF5FCE6A4331B0BE8C2F /* Pods-Zhangdian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zhangdian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zhangdian/Pods-Zhangdian.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -395,6 +425,7 @@
 				35A2EEEB21C7370000A30DB0 /* Billing */,
 				35A2EEEC21C7372100A30DB0 /* Forms */,
 				35A2EEED21C7373100A30DB0 /* Set */,
+				E0A4F2F7224120B600AA8FBE /* Models */,
 				3522B51421B7685C004A7C8F /* Assets.xcassets */,
 				3522B51621B7685C004A7C8F /* LaunchScreen.storyboard */,
 				3522B51921B7685C004A7C8F /* Info.plist */,
@@ -407,6 +438,8 @@
 		3522B52121B7AD59004A7C8F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				E0B8DC672243D0020085321F /* XLMDateFormatter */,
+				E0A4F2F322411D9800AA8FBE /* ZDNetwork */,
 				5F211B6C22225B07008E204D /* CurrentVC */,
 				3522B52321B7AD9B004A7C8F /* NetWork */,
 				5F387C3521FD9AD400FB0F66 /* MFContainerController */,
@@ -845,6 +878,8 @@
 				5F53F56322199CCB00AD8BB5 /* ZDCodeLoginController.m */,
 				5F53F5652219A30F00AD8BB5 /* ZDReceiveCodeController.h */,
 				5F53F5662219A30F00AD8BB5 /* ZDReceiveCodeController.m */,
+				E0067F8B2241414B0017EF10 /* ZDSetPwdViewController.h */,
+				E0067F8C2241414B0017EF10 /* ZDSetPwdViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -864,6 +899,77 @@
 				35A600DE22293E2B00E20D22 /* ZDCardCollectionFlowLayout.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E0A4F2F322411D9800AA8FBE /* ZDNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				E0A4F2F422411DC200AA8FBE /* ZDNetwork.h */,
+				E0A4F2F522411DC200AA8FBE /* ZDNetwork.m */,
+			);
+			path = ZDNetwork;
+			sourceTree = "<group>";
+		};
+		E0A4F2F7224120B600AA8FBE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0B8DC412243C6330085321F /* ZDSuperPort */,
+				E0B8DC402243B79D0085321F /* MemberInfo */,
+				E0A4F2FC2241215600AA8FBE /* Login */,
+				E0A4F2F8224120C500AA8FBE /* Main */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E0A4F2F8224120C500AA8FBE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E0A4F2F92241211F00AA8FBE /* ZDMainPort.h */,
+				E0A4F2FA2241211F00AA8FBE /* ZDMainPort.m */,
+				E061777B2243D90F008746E4 /* ZDMainGuessPort.h */,
+				E061777C2243D90F008746E4 /* ZDMainGuessPort.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E0A4F2FC2241215600AA8FBE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E0A4F2FD2241216700AA8FBE /* ZDLoginPort.h */,
+				E0A4F2FE2241216700AA8FBE /* ZDLoginPort.m */,
+				E0A4F3032241299300AA8FBE /* ZDAuthCode.h */,
+				E0A4F3042241299300AA8FBE /* ZDAuthCode.m */,
+				E0067F8822412EF50017EF10 /* ZDRegisterPort.h */,
+				E0067F8922412EF60017EF10 /* ZDRegisterPort.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E0B8DC402243B79D0085321F /* MemberInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E0B8DC3D2243B7930085321F /* ZDMemberInfo.h */,
+				E0B8DC3E2243B7930085321F /* ZDMemberInfo.m */,
+			);
+			path = MemberInfo;
+			sourceTree = "<group>";
+		};
+		E0B8DC412243C6330085321F /* ZDSuperPort */ = {
+			isa = PBXGroup;
+			children = (
+				E0A4F3002241225C00AA8FBE /* ZDSuperPort.h */,
+				E0A4F3012241225C00AA8FBE /* ZDSuperPort.m */,
+			);
+			path = ZDSuperPort;
+			sourceTree = "<group>";
+		};
+		E0B8DC672243D0020085321F /* XLMDateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				E0B8DC682243D0020085321F /* XLMDateFormatter.h */,
+				E0B8DC692243D0020085321F /* XLMDateFormatter.m */,
+			);
+			path = XLMDateFormatter;
 			sourceTree = "<group>";
 		};
 		F20DC638B520CB8C0B7F783C /* Pods */ = {
@@ -969,10 +1075,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Zhangdian/Pods-Zhangdian-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1009,12 +1117,14 @@
 				5F500E12222C04D9007051C3 /* ZDReferenceCell.m in Sources */,
 				35F9EDCB2227DC2D005D5ADB /* ZDScreenCell.m in Sources */,
 				35F9EDC52227AB7A005D5ADB /* ZDBuyDetailController.m in Sources */,
+				E0A4F3022241225C00AA8FBE /* ZDSuperPort.m in Sources */,
 				5F34F05F221EECFC00603E87 /* ZDGoodsDetailHeaderView.m in Sources */,
 				5F387C5021FDAB9900FB0F66 /* ZDDetailCell.m in Sources */,
 				5F500E0F222C01BE007051C3 /* ZDReferenceController.m in Sources */,
 				35A2EF1C21C73B4800A30DB0 /* ZDBabBarController.m in Sources */,
 				5F9074EC222BC23F009340B1 /* ZDNumberController.m in Sources */,
 				5F387C4421FD9AD400FB0F66 /* MFContainerSegementCell.m in Sources */,
+				E0A4F2FF2241216700AA8FBE /* ZDLoginPort.m in Sources */,
 				3522B51321B7685B004A7C8F /* Zhangdian.xcdatamodeld in Sources */,
 				5F387C5321FDABB400FB0F66 /* ZDDetailCollectionCell.m in Sources */,
 				5FFBB4D12222A65B00B25F1A /* ZDEmployeeController.m in Sources */,
@@ -1029,9 +1139,11 @@
 				35A2EF1921C73B2E00A30DB0 /* ZDViewController.m in Sources */,
 				5F5A76C12222B4B800BE57C0 /* ZDAddEmployeeHeaderView.m in Sources */,
 				5FDFEA11222BCD1100EB5219 /* ZDRoleController.m in Sources */,
+				E0B8DC3F2243B7930085321F /* ZDMemberInfo.m in Sources */,
 				5F50EAD1222A870F00911328 /* ZDPendingCell.m in Sources */,
 				5F387C4C21FD9DAF00FB0F66 /* ZDRefrigeratorController.m in Sources */,
 				5F9AF5762226E58500C79432 /* ZDIntrolduceView.m in Sources */,
+				E0067F8D2241414B0017EF10 /* ZDSetPwdViewController.m in Sources */,
 				35A2EF2221C73D8400A30DB0 /* ZDBillingController.m in Sources */,
 				3522B51B21B7685C004A7C8F /* main.m in Sources */,
 				3522B52621B7ADD4004A7C8F /* ZDNet.m in Sources */,
@@ -1051,8 +1163,10 @@
 				35A600D62229209000E20D22 /* JXCircleModel.m in Sources */,
 				5F3570332226D36200C02FE6 /* ZDYPSGCell.m in Sources */,
 				5F387C4921FD9D5700FB0F66 /* ZDBuyController.m in Sources */,
+				E0A4F2F622411DC200AA8FBE /* ZDNetwork.m in Sources */,
 				5F39DBDA2234B2AE00C25C65 /* ZDTabBar.m in Sources */,
 				35A2EF1F21C73D7000A30DB0 /* ZDDetailController.m in Sources */,
+				E061777D2243D90F008746E4 /* ZDMainGuessPort.m in Sources */,
 				5F500E0A222BF872007051C3 /* ZDTallyHeader.m in Sources */,
 				5F500E15222C1B8B007051C3 /* ZDReceiveController.m in Sources */,
 				5FEFA0D6222A677A0018528F /* ZDProfitController.m in Sources */,
@@ -1064,6 +1178,7 @@
 				5FDFEA17222BD20900EB5219 /* ZDPrintSetController.m in Sources */,
 				5F34F059221C51D500603E87 /* ZDPrintController.m in Sources */,
 				35F9EDCE2227DC57005D5ADB /* ZDScreenReusableView.m in Sources */,
+				E0B8DC6A2243D0020085321F /* XLMDateFormatter.m in Sources */,
 				5F9074EF222BC264009340B1 /* ZDNumberCell.m in Sources */,
 				5F3570302226D17B00C02FE6 /* ZDYPSGController.m in Sources */,
 				5F980900222BAC35004D8028 /* ZDLabelModel.m in Sources */,
@@ -1087,6 +1202,8 @@
 				5F9808FA222BA71E004D8028 /* ZDCompanyController.m in Sources */,
 				5F3570372226D65D00C02FE6 /* ZDYPSG.m in Sources */,
 				5F387C4621FD9AD400FB0F66 /* MFContainerController.m in Sources */,
+				E0067F8A22412EF60017EF10 /* ZDRegisterPort.m in Sources */,
+				E0A4F2FB2241211F00AA8FBE /* ZDMainPort.m in Sources */,
 				5FFBB4D52222A81200B25F1A /* ZDEmployeeCell.m in Sources */,
 				5F34F056221C4BE800603E87 /* ZDCommonController.m in Sources */,
 				5F35702D2226CD9600C02FE6 /* ZDJSSGCell.m in Sources */,
@@ -1099,6 +1216,7 @@
 				359A268A21DC45F700C1B9C4 /* ZDHomeItemCell.m in Sources */,
 				5FDFEA14222BCF3000EB5219 /* ZDRoleCell.m in Sources */,
 				5F50EAD7222AB5E300911328 /* ZDTotalCell.m in Sources */,
+				E0A4F3052241299300AA8FBE /* ZDAuthCode.m in Sources */,
 				5F63D6A2221EF4BE004A5450 /* ZDGoodsDetailCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

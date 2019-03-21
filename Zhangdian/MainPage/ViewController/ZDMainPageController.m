@@ -19,8 +19,19 @@
 #import "ZDTallyController.h"
 #import "ZDPendingController.h"
 #import "ZDReferenceController.h"
-@interface ZDMainPageController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+#import "ZDMainPort.h"
+
+@interface ZDMainPageController ()
+<
+UICollectionViewDelegate,
+UICollectionViewDataSource,
+UICollectionViewDelegateFlowLayout
+>
+
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+@property(nonatomic,strong) __block NSMutableArray *arrMain;
+@property(nonatomic,copy) __block NSString *strUpdateDate;
 
 @end
 
@@ -39,6 +50,7 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"ZDTodayeusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ZDTodayeusableView"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"ZDGuessReusableView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ZDGuessReusableView"];
     [self contentBehaviorNever:self.collectionView];
+    [self fetchMainData];
 }
 
 #pragma mark - CollectionView
@@ -71,7 +83,7 @@
         return 3;
     }
     if (section == 1) {
-        return 9;
+        return _arrMain.count;
     }
     return 5;
 }
@@ -102,6 +114,7 @@
     }
     if (indexPath.section ==1) {
         ZDTodayeusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ZDTodayeusableView" forIndexPath:indexPath];
+        [view setUpdateDate:_strUpdateDate];
         return view;
     }
     ZDGuessReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ZDGuessReusableView" forIndexPath:indexPath];
@@ -117,6 +130,9 @@
     }
     if (indexPath.section == 1) {
         ZDHomeTodayCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZDHomeTodayCell" forIndexPath:indexPath];
+        if (indexPath.row < _arrMain.count) {
+            [cell setHomeTodayDict:_arrMain[indexPath.row]];
+        }
         return cell;
     }
     ZDHomeGuessCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZDHomeGuessCell" forIndexPath:indexPath];
@@ -140,8 +156,8 @@
     }
     if (indexPath.section == 1) {
         ZDLoginController *vc = kStoryLogin(@"ZDLoginController");
-        [self.navigationController pushViewController:vc animated:YES];
-
+        ZDNavigationController *nav = [[ZDNavigationController alloc]initWithRootViewController:vc];
+        [self presentViewController:nav animated:YES completion:nil];
     }
     if (indexPath.section == 2) {
         ZDGoodsDetailController *vc = kStoryMain(@"ZDGoodsDetailController");
@@ -149,6 +165,19 @@
     }
 }
 
+
+#pragma mark - network
+- (void)fetchMainData{
+    @weakify(self);
+    [ZDMainPort fetchMainInfoWithSuccess:^(NSArray * _Nonnull arr, NSString * _Nonnull strDate) {
+        @strongify(self);
+        self.arrMain = [arr mutableCopy];
+        self.strUpdateDate = strDate;
+        [self.collectionView reloadData];
+    } fail:^(NSError * _Nonnull error) {
+        
+    }];
+}
 
 
 @end

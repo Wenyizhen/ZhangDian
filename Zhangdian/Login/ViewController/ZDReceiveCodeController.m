@@ -7,6 +7,8 @@
 //
 
 #import "ZDReceiveCodeController.h"
+#import "ZDSetPwdViewController.h"
+#import "ZDAuthCode.h"
 
 @implementation ZDNoMenuTextField
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
@@ -31,6 +33,7 @@ static NSInteger maxNum = 4;
 @property (weak, nonatomic) IBOutlet UILabel *numLabel2;
 @property (weak, nonatomic) IBOutlet UILabel *numLabel3;
 
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (strong, nonatomic) UIColor *selectedColor;
 @property (strong, nonatomic) UIColor *unSeletedColor;
 @property (strong, nonatomic) NSMutableArray *arr;
@@ -52,6 +55,18 @@ static NSInteger maxNum = 4;
     [self setNavBgAlpha:0];
     [self configNumView];
     [self.textField becomeFirstResponder];
+    
+    @weakify(self);
+    if (_strPhone.length > 0) {
+        [ZDAuthCode fetchAuthCode:_strPhone success:^(id  _Nonnull obejct) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                @strongify(self);
+                self.lblTitle.text = [NSString stringWithFormat:@"我们已向 %@ 发送验证码 请及时查看短信，输入验证码",self.strPhone];
+            });
+        } fail:^(NSError * _Nonnull error) {
+
+        }];
+    }
 }
 
 - (NSMutableArray *)arr {
@@ -69,7 +84,8 @@ static NSInteger maxNum = 4;
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     if (self.arr.count >= maxNum && string.length) {
         return NO;
-    }else {
+    }
+    else {
         if (string.length) {
             if (string.length ==1) {
                 [self.arr addObject:string];
@@ -88,6 +104,13 @@ static NSInteger maxNum = 4;
             }
         }
         [self configNumView];
+    }
+    NSString *strCode = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    if (strCode.length >= maxNum) {
+        ZDSetPwdViewController *setPwdVC = kStoryLogin(@"ZDSetPwdViewController");
+        setPwdVC.strCode = strCode;
+        setPwdVC.strPhone = self.strPhone;
+        [self.navigationController pushViewController:setPwdVC animated:YES];
     }
     return YES;
 }

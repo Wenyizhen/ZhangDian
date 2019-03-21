@@ -16,4 +16,7 @@ target 'Zhangdian' do
   pod 'YYCategories','= 1.0.4'
   pod 'HBDNavigationBar', '~> 1.4.4'
   pod 'SDCycleScrollView','~> 1.75'
+  pod 'ReactiveObjC'
+  pod 'IQKeyboardManager'
+  
 end

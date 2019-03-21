@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZDTodayeusableView : UICollectionReusableView
 
+- (void)setUpdateDate:(NSString *)date;
+
 @end
 
 NS_ASSUME_NONNULL_END

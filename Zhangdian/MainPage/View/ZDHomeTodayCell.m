@@ -8,11 +8,17 @@
 
 #import "ZDHomeTodayCell.h"
 @interface ZDHomeTodayCell ()
+
 @property (weak, nonatomic) IBOutlet UILabel *upLabel;
 @property (weak, nonatomic) IBOutlet UILabel *downLabel;
 
 @end
 
 @implementation ZDHomeTodayCell
+
+- (void)setHomeTodayDict:(NSDictionary *)dict{
+    _downLabel.text = dict[@"title"];
+    _upLabel.text = [NSString stringWithFormat:@"%@",dict[@"price"]];
+}
 
 @end

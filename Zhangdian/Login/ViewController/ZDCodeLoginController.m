@@ -26,11 +26,12 @@
     self.nextBtn.layer.cornerRadius = 23;
     [self setNavBgAlpha:0];
     
-    __weak typeof(self) weakSelf = self;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithActionBlock:^(id  _Nonnull sender) {
-        [weakSelf.view endEditing:YES];
-    }];
-    [self.view addGestureRecognizer:tap];
+    RACSignal *signalLogin = [[self.phoneTF.rac_textSignal merge:RACObserve(self.phoneTF, text)]
+                         map:^id _Nullable(id  _Nullable value) {
+                             NSString *phone = (NSString *)value;
+                             return @(phone.length == 11);
+                         }];
+    RAC(self.nextBtn,enabled) = signalLogin;
 }
 
 - (IBAction)clearAction:(id)sender {
@@ -46,6 +47,7 @@
 
 - (IBAction)nextAction:(id)sender {
     ZDReceiveCodeController *vc = kStoryLogin(@"ZDReceiveCodeController");
+    vc.strPhone = _phoneTF.text;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

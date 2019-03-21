@@ -13,7 +13,6 @@
 #import "MJRefresh.h"
 #import <YYModel/YYModel.h>
 #import <AFNetworking.h>
-#import "ZDNet.h"
 #import "YYCategories.h"
 #import "Masonry.h"
 #import "HBDNavigationBar.h"
@@ -23,5 +22,12 @@
 #import "UIImageView+WebCache.h"
 #import "MFContainerController.h"
 #import "UIViewController+CurrentVC.h"
+
+#if __has_feature(objc_arc)
+#import <ReactiveObjC/ReactiveObjC.h>
+#import <ReactiveObjC/RACReturnSignal.h>
+#endif
+#import "IQKeyboardManager.h"
+#import "ZDMemberInfo.h"
 
 #endif /* PrefixHeader_pch */
