@@ -20,6 +20,7 @@
 #import "ZDPendingController.h"
 #import "ZDReferenceController.h"
 #import "ZDMainPort.h"
+#import "ZDMainGuessPort.h"
 
 @interface ZDMainPageController ()
 <
@@ -32,6 +33,7 @@ UICollectionViewDelegateFlowLayout
 
 @property(nonatomic,strong) __block NSMutableArray *arrMain;
 @property(nonatomic,copy) __block NSString *strUpdateDate;
+@property(nonatomic,strong) __block NSMutableArray *arrGuess;
 
 @end
 
@@ -79,13 +81,12 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if (section ==0) {
-        return 3;
+    switch (section) {
+        case 0:return 3;break;
+        case 1:return _arrMain.count;break;
+        case 2:return _arrGuess.count;break;
+        default:return 0;break;
     }
-    if (section == 1) {
-        return _arrMain.count;
-    }
-    return 5;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
@@ -122,21 +123,29 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        ZDHomeItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZDHomeItemCell" forIndexPath:indexPath];
-        NSString *str = indexPath.row == 0?@"daichuli":(indexPath.row ==1?@"jizhangben":@"cankaojia");
-        cell.imgView.image = [UIImage imageNamed:str];
-        return cell;
+    switch (indexPath.section) {
+        case 0:{
+            ZDHomeItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZDHomeItemCell" forIndexPath:indexPath];
+            NSString *str = indexPath.row == 0?@"daichuli":(indexPath.row ==1?@"jizhangben":@"cankaojia");
+            cell.imgView.image = [UIImage imageNamed:str];
+            return cell;
+        }break;
+        case 1:{
+            ZDHomeTodayCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZDHomeTodayCell" forIndexPath:indexPath];
+            if (indexPath.row < _arrMain.count) {
+                [cell setHomeTodayDict:_arrMain[indexPath.row]];
+            }
+            return cell;
+        }break;
+        case 2:{
+            ZDHomeGuessCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZDHomeGuessCell" forIndexPath:indexPath];
+            [cell setMainGuessPort:_arrGuess[indexPath.row]];
+            return cell;
+        }break;
+        default:
+            return nil;
+            break;
     }
-    if (indexPath.section == 1) {
-        ZDHomeTodayCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZDHomeTodayCell" forIndexPath:indexPath];
-        if (indexPath.row < _arrMain.count) {
-            [cell setHomeTodayDict:_arrMain[indexPath.row]];
-        }
-        return cell;
-    }
-    ZDHomeGuessCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ZDHomeGuessCell" forIndexPath:indexPath];
-    return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -169,14 +178,33 @@ UICollectionViewDelegateFlowLayout
 #pragma mark - network
 - (void)fetchMainData{
     @weakify(self);
+    ZDProgressToast(@"正在查询数据...");
     [ZDMainPort fetchMainInfoWithSuccess:^(NSArray * _Nonnull arr, NSString * _Nonnull strDate) {
         @strongify(self);
+        ZDDismissToast;
+        [self fetchMainGuess:YES];
         self.arrMain = [arr mutableCopy];
         self.strUpdateDate = strDate;
         [self.collectionView reloadData];
     } fail:^(NSError * _Nonnull error) {
-        
+        ZDFailToast(error.domain);
+        ZDDismissToast;
     }];
+}
+
+- (void)fetchMainGuess:(BOOL)isFirst{
+    @weakify(self);
+    if (isFirst) {
+        _arrGuess = [NSMutableArray array];
+    }
+    [ZDMainGuessPort fetchMainGuessWithFirst:isFirst
+                                     success:^(NSArray * _Nonnull arrList, BOOL isHaveMore) {
+                                         @strongify(self);
+                                         [self.arrGuess addObjectsFromArray:arrList];
+                                         [self.collectionView reloadData];
+                                     } fail:^(NSError * _Nonnull error) {
+                                         ZDFailToast(error.domain);
+                                     }];
 }
 
 

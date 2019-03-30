@@ -99,6 +99,9 @@ static NSString * const DEV_HTTP_URL = @"http://47.110.39.79:8080/renren-api";//
                     else{
                         NSString *strMsg = dict[@"msg"];
                         NSError *error = [NSError errorWithDomain:strMsg code:iCode userInfo:nil];
+                        if ([strMsg isEqualToString:@"token失效，请重新登录"] && iCode == 500) {
+                            [[NSUserDefaults standardUserDefaults]setObject:@"" forKey:Default_Token];
+                        }                        
                         if (fail) {
                             fail(error);
                         }

@@ -21,4 +21,11 @@
     // Configure the view for the selected state
 }
 
+- (void)setGarlicProfit:(ZDGarlicProfit *)profit{
+    _nameLabel.text = profit.garlicBuyerName;
+    _buyLabel.text = [NSString stringWithFormat:@"%zd元",[profit.buyAmount integerValue]];
+    _saleLabel.text = [NSString stringWithFormat:@"%zd元",[profit.sellAmount integerValue]];
+    _profitLabel.text = [NSString stringWithFormat:@"%zd元",[profit.profit integerValue]];
+}
+
 @end

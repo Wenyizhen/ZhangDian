@@ -29,5 +29,6 @@
 #endif
 #import "IQKeyboardManager.h"
 #import "ZDMemberInfo.h"
+#import "ZDProgressHUD.h"
 
 #endif /* PrefixHeader_pch */

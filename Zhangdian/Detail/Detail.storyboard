@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="smK-YV-0QU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="smK-YV-0QU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -249,7 +249,7 @@
                                                     <color key="textColor" red="0.027450980390000001" green="0.027450980390000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="单间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eS-oy-FW2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="单价" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eS-oy-FW2">
                                                     <rect key="frame" x="154.5" y="0.0" width="66" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.027450980390000001" green="0.027450980390000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -335,8 +335,8 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxP-Ra-el2">
                                                             <rect key="frame" x="0.0" y="0.0" width="110.5" height="59"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1888" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVX-7Q-nBT">
-                                                                    <rect key="frame" x="36" y="29" width="38" height="18"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVX-7Q-nBT">
+                                                                    <rect key="frame" x="44.5" y="29" width="21.5" height="18"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                     <color key="textColor" red="0.027450980392156862" green="0.027450980392156862" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -378,8 +378,8 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K90-oi-RAN">
                                                             <rect key="frame" x="220.5" y="0.0" width="110.5" height="59"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1888" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyz-Gp-vLX">
-                                                                    <rect key="frame" x="36.5" y="29" width="38" height="18"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyz-Gp-vLX">
+                                                                    <rect key="frame" x="44.5" y="29" width="21.5" height="18"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                     <color key="textColor" red="0.027450980390000001" green="0.027450980390000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -421,8 +421,8 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCz-nb-PnT">
                                                             <rect key="frame" x="110.5" y="0.0" width="110" height="59"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1888" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2H-eB-hw9">
-                                                                    <rect key="frame" x="36" y="29" width="38" height="18"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2H-eB-hw9">
+                                                                    <rect key="frame" x="44.5" y="29" width="21.5" height="18"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                     <color key="textColor" red="0.027450980390000001" green="0.027450980390000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -599,6 +599,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="lblName" destination="eRW-uH-uv8" id="7dg-Bq-V0o"/>
+                                            <outlet property="lblPrice" destination="rlI-gY-dKx" id="aXU-MI-9AC"/>
+                                            <outlet property="lblSum" destination="Pem-7k-qP4" id="3MB-wc-0RO"/>
+                                            <outlet property="lblTime" destination="IYi-PV-cV8" id="6oc-9Z-Ghf"/>
+                                            <outlet property="lblWeight" destination="Tw9-PV-dAD" id="iuk-f4-mBd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -941,6 +948,9 @@
                         <outlet property="collectionView" destination="3Uj-4G-4tW" id="hdB-Yk-xQ6"/>
                         <outlet property="collectionViewFlowLayout" destination="fzo-ju-lrP" id="upW-k3-ohy"/>
                         <outlet property="headerBgView" destination="EgX-2b-O2H" id="b55-af-q20"/>
+                        <outlet property="lblAvgAmount" destination="B2H-eB-hw9" id="VSn-oW-fFZ"/>
+                        <outlet property="lblAvgPrice" destination="vyz-Gp-vLX" id="aGN-jM-nQc"/>
+                        <outlet property="lblAvgWeight" destination="HVX-7Q-nBT" id="S4K-dm-ul4"/>
                         <outlet property="screenView" destination="sFQ-f8-elB" id="NPZ-cd-nNo"/>
                         <outlet property="tableView" destination="uOX-NK-pxB" id="GJ6-g6-79y"/>
                         <outlet property="tapView" destination="bwt-Uq-l5M" id="l2p-NP-kOZ"/>
@@ -1746,6 +1756,7 @@
                     <connections>
                         <outlet property="bgView" destination="6IV-nf-Z8X" id="ciS-Eg-Axl"/>
                         <outlet property="searchTF" destination="xj9-9s-aPC" id="Dm3-a9-f4G"/>
+                        <outlet property="tableViewList" destination="gGB-JE-fCi" id="a4r-Vb-UMP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pUm-IL-dVV" userLabel="First Responder" sceneMemberID="firstResponder"/>

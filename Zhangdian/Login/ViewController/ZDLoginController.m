@@ -70,10 +70,13 @@
 }
 
 - (IBAction)didPressedLogin:(id)sender {
+    @weakify(self);
     [ZDLoginPort fetchLogin:_phoneTF.text pwd:_codeTF.text success:^(id  _Nonnull obejct) {
-        
+        @strongify(self);
+        [self dismissViewControllerAnimated:YES completion:nil];
+        [ZDToast showSuccessWithMessage:@"登录成功!"];
     } fail:^(NSError * _Nonnull error) {
-        
+        [ZDToast showFailWithMessage:@"登录失败!"];
     }];
 }
 

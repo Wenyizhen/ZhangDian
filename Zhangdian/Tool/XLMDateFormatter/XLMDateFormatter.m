@@ -91,5 +91,12 @@
     return strDate;
 }
 
++ (NSString *)timestamp{
+    NSDate* date = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval time=[date timeIntervalSince1970]*1000;
+    NSString *timeString = [NSString stringWithFormat:@"%.0f", time];
+    return timeString;
+}
+
 
 @end

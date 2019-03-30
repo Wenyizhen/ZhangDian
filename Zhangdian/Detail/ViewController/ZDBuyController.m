@@ -13,6 +13,8 @@
 #import "ZDEverydayController.h"
 #import "ZDProfitController.h"
 #import "ZDPendingController.h"
+#import "ZDLoginController.h"
+
 @interface ZDBuyController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -104,6 +106,10 @@
 }
 
 - (void)yuanpi:(NSInteger)row {
+    if (![ZDMemberInfo isLogin]) {
+        [self loginVC];
+        return;
+    }
     switch (row) {
         case 0:{
             ZDBuyDetailController *vc = kStoryDetail(@"ZDBuyDetailController");
@@ -149,6 +155,13 @@
         }
             break;
     }
+}
+
+#pragma mark - private
+- (void)loginVC{
+    ZDLoginController *vc = kStoryLogin(@"ZDLoginController");
+    ZDNavigationController *nav = [[ZDNavigationController alloc]initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 @end

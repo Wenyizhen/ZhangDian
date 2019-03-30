@@ -11,7 +11,17 @@
 #import "ZDScreenCell.h"
 #import "ZDScreenReusableView.h"
 #import "ZDTotalController.h"
-@interface ZDBuyDetailController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+#import "ZDPurchasezDetailPort.h"
+
+@interface ZDBuyDetailController ()
+<
+UITableViewDelegate,
+UITableViewDataSource,
+UICollectionViewDelegate,
+UICollectionViewDataSource,
+UICollectionViewDelegateFlowLayout
+>
+
 @property (weak, nonatomic) IBOutlet UIView *screenView;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *collectionViewFlowLayout;
 @property (weak, nonatomic) IBOutlet UIView *headerBgView;
@@ -19,6 +29,18 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *trailingLayoutConstraint;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *tapView;
+@property (weak, nonatomic) IBOutlet UILabel *lblAvgWeight;
+@property (weak, nonatomic) IBOutlet UILabel *lblAvgAmount;
+@property (weak, nonatomic) IBOutlet UILabel *lblAvgPrice;
+
+@property(nonatomic,strong) NSMutableArray *arrList;
+@property(nonatomic,copy) NSString *strBeginTime;
+@property(nonatomic,copy) NSString *strEndTime;
+@property(nonatomic,copy) NSString *strCompany;
+@property(nonatomic,copy) NSString *strGarlicID;
+@property(nonatomic,assign) CGFloat fMaxPrice;
+@property(nonatomic,assign) CGFloat fMinPrice;
+@property(nonatomic,copy) NSString *strWarehouseID;
 
 @end
 
@@ -88,10 +110,11 @@
         default:
             break;
     }
+    [self fetchPurchaseDetail:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return _arrList.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -100,6 +123,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ZDBuyDetailCell *cell  = [tableView dequeueReusableCellWithIdentifier:@"ZDBuyDetailCell" forIndexPath:indexPath];
+    if (indexPath.row < _arrList.count) {
+        [cell setPurchaseDetail:_arrList[indexPath.row]];
+    }
     return cell;
 }
 
@@ -191,4 +217,47 @@
     [self.navigationController pushViewController:vc animated:YES];
     
 }
+
+#pragma mark - network
+- (void)fetchPurchaseDetail:(BOOL)_isFirst{
+    if (_isFirst) {
+        _arrList = [NSMutableArray array];
+    }
+    @weakify(self);
+    ZDProgressToast(@"正在查询数据...");
+    if (_type == DetailType_yuanpi_shougou || _type == DetailType_yuanpi_chushou) {
+        _strWarehouseID = nil;
+    }
+    
+    [ZDPurchasezDetailPort fetchPurchaseDetailWithFirst:_isFirst
+                                              fetchEnum:(FetchDetail_Enum)_type
+                                              beginTime:_strBeginTime
+                                                endTime:_strEndTime
+                                             garlicName:_strCompany
+                                               garlicID:_strGarlicID
+                                               minPrice:_fMinPrice
+                                               maxPrice:_fMaxPrice
+                                            warehouseID:_strWarehouseID
+                                                success:^(NSArray * _Nonnull arrList, BOOL isHaveMore) {
+                                                    @strongify(self);
+                                                    [self.arrList addObjectsFromArray:arrList];
+                                                    [self.tableView reloadData];
+                                                    
+                                                    if (self.arrList.count > 0) {
+                                                        ZDPurchasezDetailPort *detailModel = self.arrList[0];
+                                                        dispatch_async(dispatch_get_main_queue(), ^{
+                                                            @strongify(self);
+                                                            self.lblAvgWeight.text = [NSString stringWithFormat:@"%zd",detailModel.totalWeight.integerValue];
+                                                            self.lblAvgAmount.text = [NSString stringWithFormat:@"%zd",detailModel.totalAmount.integerValue];
+                                                            self.lblAvgPrice.text = [NSString stringWithFormat:@"%0.2f",detailModel.avgPrice.floatValue];
+                                                        });
+                                                    }
+                                                    ZDDismissToast;
+                                                }
+                                                   fail:^(NSError * _Nonnull error) {
+                                                       ZDFailToast(error.domain);
+                                                       ZDDismissToast;
+                                                   }];
+}
+
 @end

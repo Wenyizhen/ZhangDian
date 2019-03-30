@@ -96,5 +96,11 @@ static NSString *const def_YearMonthDayHourMinuteSec_DF_Point    = @"yyyy.MM.dd 
 +(NSString *)turnTimestampToString:(double)_fTime  formatString:(NSString *)formatString;
 
 
+/**
+ 时间戳
+
+ @return 时间戳
+ */
++ (NSString *)timestamp;
 
 @end

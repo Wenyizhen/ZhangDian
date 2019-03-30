@@ -10,7 +10,7 @@
 #import "ZDViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger,DetailType) {
-    DetailType_jingsuan_shougou,
+    DetailType_jingsuan_shougou = 0,
     DetailType_yuanpi_shougou,
     DetailType_jingsuan_chushou,
     DetailType_yuanpi_chushou,
