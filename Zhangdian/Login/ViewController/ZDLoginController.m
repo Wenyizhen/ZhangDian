@@ -29,16 +29,16 @@
 
 
 - (void)configSubViews {
-    UIButton *btnClose = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btnClose setImage:[UIImage imageNamed:@"guanbi"] forState:UIControlStateNormal];
-    btnClose.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    btnClose.size = CGSizeMake(30, 30);
-    @weakify(self);
-    [[btnClose rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(__kindof UIControl * _Nullable x) {
-        @strongify(self);
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:btnClose];
+//    UIButton *btnClose = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [btnClose setImage:[UIImage imageNamed:@"guanbi"] forState:UIControlStateNormal];
+//    btnClose.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+//    btnClose.size = CGSizeMake(30, 30);
+//    @weakify(self);
+//    [[btnClose rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(__kindof UIControl * _Nullable x) {
+//        @strongify(self);
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    }];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:btnClose];
     self.loginBtn.layer.cornerRadius = 23;
     self.registerBtn.layer.cornerRadius = 23;
     [self setNavBgAlpha:0];
@@ -70,10 +70,8 @@
 }
 
 - (IBAction)didPressedLogin:(id)sender {
-    @weakify(self);
     [ZDLoginPort fetchLogin:_phoneTF.text pwd:_codeTF.text success:^(id  _Nonnull obejct) {
-        @strongify(self);
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [[NSNotificationCenter defaultCenter]postNotificationName:NSNotification_LoginSuccess object:nil];
         [ZDToast showSuccessWithMessage:@"登录成功!"];
     } fail:^(NSError * _Nonnull error) {
         [ZDToast showFailWithMessage:@"登录失败!"];

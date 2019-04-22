@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/*NSNotification*/
+static NSString *const NSNotification_LoginSuccess = @"LoginSuccess";
+
 /*NSUserDefaults*/
 static NSString *const Default_UserID = @"user_ID";
 static NSString *const Default_Token = @"token";

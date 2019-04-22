@@ -7,8 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "ZDBabBarController.h"
+#import "ZDLoginController.h"
+#import "ZDMemberInfo.h"
 
 @interface AppDelegate ()
+
+@property(nonatomic,strong) ZDBabBarController *tabBarMain;
+@property(nonatomic,strong) ZDLoginController *loginVC;
 
 @end
 
@@ -17,8 +23,35 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(changeRootViewController) name:NSNotification_LoginSuccess object:nil];
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [self changeRootViewController];
+    [self.window makeKeyAndVisible];
     [IQKeyboardManager sharedManager].enable = YES;
+    
     return YES;
+}
+
+#pragma mark - funcation
+/**
+ 变更根视图
+ */
+- (void)changeRootViewController{
+    UINavigationController *nav;
+    CATransition *transtition = [CATransition animation];
+    transtition.duration = 0.5;
+    if (ZDMemberInfo.isLogin) {
+        self.tabBarMain = [[ZDBabBarController alloc]init];
+        transtition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+        nav = [[ZDNavigationController alloc]initWithRootViewController:self.tabBarMain];
+    }
+    else{
+        self.loginVC = kStoryLogin(@"ZDLoginController");
+        transtition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+        nav = [[ZDNavigationController alloc]initWithRootViewController:self.loginVC];
+    }
+    [self.window.layer addAnimation:transtition forKey:@"animation"];
+    [self.window setRootViewController:nav];
 }
 
 

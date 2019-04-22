@@ -164,9 +164,7 @@ UICollectionViewDelegateFlowLayout
         }
     }
     if (indexPath.section == 1) {
-        ZDLoginController *vc = kStoryLogin(@"ZDLoginController");
-        ZDNavigationController *nav = [[ZDNavigationController alloc]initWithRootViewController:vc];
-        [self presentViewController:nav animated:YES completion:nil];
+        
     }
     if (indexPath.section == 2) {
         ZDGoodsDetailController *vc = kStoryMain(@"ZDGoodsDetailController");
